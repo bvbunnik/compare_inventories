@@ -1,0 +1,512 @@
+<!-- DOCTYPE -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Viewport Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      Engage - Multi-Purose Bootstrap HTML5 Template
+    </title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+    <!-- Responsive Style -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/responsive.css">
+    <!--Fonts-->
+    <link rel="stylesheet" media="screen" href="/assets/fonts/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" media="screen" href="/assets/fonts/simple-line-icons.css">
+	<link rel="stylesheet" media="screen" href="/assets/fonts/fonts.css">
+
+	<link rel="stylesheet" type="text/css" href="/assets/css/dataTables.bootstrap4.min.css">
+
+    <!-- Color CSS Styles  -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/colors/green.css" media="screen" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js">
+    </script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js">
+    </script>
+    <![endif]-->
+  </head>
+  <body>
+	<div class="container-fluid">
+  <!-- Header area wrapper starts -->
+    <header id="header-wrap">
+
+      <!-- Roof area starts -->
+
+      <!-- Roof area Ends -->
+
+      <!-- Header area starts -->
+      <section id="header">
+
+        <!-- Navbar Starts -->
+        <nav class="navbar navbar-light" data-spy="affix" data-offset-top="50">
+            <button class='navbar-toggler hidden-md-up pull-xs-right' data-target='#main-menu' data-toggle='collapse' type='button'>
+              ?
+            </button>
+            <!-- Brand -->
+            <a class="navbar-brand" href="index.html">
+              <img src="/assets/img/Logo_Compare_Small.png" alt="Compare Logo" style="width: 200px;">
+            </a>
+            <div class="collapse navbar-toggleable-sm" id="main-menu">
+              <!-- Navbar Starts -->
+              <ul class="nav nav-inline">
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="/index.html" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link active dropdown-toggle" data-toggle="dropdown" href="protocols" role="button" aria-haspopup="true" aria-expanded="false">
+                    Protocols
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item active" href="/protocols/animal_human.html">Human & Animal</a>
+                    <a class="dropdown-item" href="/protocols/food.html">Food</a>
+                    <a class="dropdown-item" href="/protocols/transport.html">Transport</a>
+                    <a class="dropdown-item" href="/protocols/vector.html">Vector</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="model-frameworks" role="button" aria-haspopup="true" aria-expanded="false">
+                    Model Frameworks
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/modelling/frameworks.html">Open-source Frameworks</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="pipelines" role="button" aria-haspopup="true" aria-expanded="false">
+                    Metagenomics Pipelines
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/pipelines/pipelines.html">Metagenomics Pipelines</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown pull-md-right">
+                  <a class="nav-link open-search" href="#" role="button" aria-haspopup="true" aria-expanded="false"><span class="top_search_icon"><i class="icon-magnifier"></i></span></a>
+                </li>
+              </ul>
+            </div>
+
+        </nav>
+        <!-- Navbar Ends -->
+
+      </section>
+    </header>
+    <!-- Header-wrap Section End -->
+
+    <!-- Service Block-1 Section -->
+    <section id="service-block-main" class="split section">
+      <!-- Container Starts -->
+
+        <!--<div class="row">
+          &lt;!&ndash; Form for navbar search area &ndash;&gt;
+          <div class="col-sm-12">
+          <form class="full-search" id="searchform" action="test.php" method="get">
+            <div class="container">
+              <input type="text" name="searchtext" placeholder="Type to Search">
+              <button type="submit" form="searchform" class="btn btn-common btn-lg">Search</button>
+            </div>
+          </form>
+          </div>
+        </div>-->
+		<div class="row">
+			<div class="col-sm-12">
+				<h1>Protocols for human and animal diseases</h1>
+				<table id="example" class="table table-striped table-responsive">
+				</table>
+			</div>
+		</div>
+	</section>
+</div>
+<script src="/assets/js/jquery-min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/assets/js/bootstrap.min.js"></script>
+    
+     <!-- All JS plugin Triggers -->
+    <script src="/assets/js/main.js"></script>
+    <!--<script src="assets/js/color-switcher.js"></script>-->
+	<script src="/assets/js/datatables.js"></script>
+	<script src="/assets/js/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript" charset="utf8">
+		var dataSet = [
+			["Free-ranging","Equidae (not specific for wildlife)","IV / PM","Equine encephalomyelitis (Eastern, Western, Venezualan)","Virus","(Eastern, Western, Venezualan) equine encephalomyelitis virus","(not specific for wildlife) www.oie.int/fileadmin/Home/fr/Health_standards/tahm/2.05.05_EQUINE_ENCEPH.pdf","OiE",,"Y"],
+["Domestic / Free-ranging","Mollusc","IV / PM","Abalone herpesvirus; Abalone viral ganglioneuritis","Virus","Abalone herpesvirus","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.4.01_INF_ABALONE.pdf","OIE","","Y"],
+["Domestic / Free-ranging","Piscine","IV / PM","Aeromonas Infection","Bacterium","Aeromona spp.","http://www.fda.gov/Food/FoodborneIllnessContaminants/CausesOfIllnessBadBugBook/ucm070523.htm http://www.merckvetmanual.com/mvm/exotic_and_laboratory_animals/fish/bacterial_diseases_of_fish.html","FDA Merck","","N"],
+["Domestic","Equidae","IV / PM","African horse sickness","Virus","African horse sickness virus (orbivirus)","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/AFRICAN_HORSE_SICKNESS.pdf http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.05.01_AHS.pdf","OIE","","Y"],
+["Free-ranging","Equidae","IV / PM","African horse sickness","Virus","African horse sickness virus (Orbivirus)","www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/AFRICAN_HORSE_SICKNESS.pdf","OiE","not in Europe currently","Y"],
+["Domestic","Suidae","IV / PM","African swine fever","Virus","African swine fever virus (asfarviridae)","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/AFRICAN_SWINE_FEVER.pdf http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.08.01_ASF.pdf","OIE","","Y"],
+["Free-ranging","Suidae / wild boar","IV / PM","African swine fever","Virus","African swine fever virus (Asfarviridae) ","www.aphaea.eu/cards/species   (pending)","APHAEA, OiE","","Y"],
+["NA","Human ","IV","Alkhurma haemorrhagic fever","Virus","Alkhurma haemorrhagic fever virus (Flavivirus)","http://www.cdc.gov/vhf/alkhurma/Alkhurma-FactSheet.pdf http://ecdc.europa.eu/en/healthtopics/Alkhurma_haemorrhagic_fever/Pages/factsheet-health-professionals.aspx","ECDC CDC","",""],
+["Free-ranging","Ruminants","IV / PM","Anaplasmosis","Parasite","Anaplasma spp","www.aphaea.eu/cards/species   (pending);  www.merckvetmanual.com/mvm/circulatory_system/blood_parasites/anaplasmosis.html","APHAEA, Merck","",""],
+["Domestic","Bovinae","IV / PM","Bovine Anaplasmosis","Bacterium","Anaplasma spp.","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.04.01_BOVINE_ANAPLASMOSIS.pdf","OIE","","Y"],
+["Domestic","Aves","IV / PM","Duck virus enteritis; duck plague","Virus","Anatid herpesvirus 1","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.03.07_DVE.pdf","OIE","","N"],
+["Free-ranging","Aves / birds (Anatidae / ducks, geese, swans)","IV / PM","Duck viral enteritis; Duck plague","Virus","Anatid herpesvirus I","www.nwhc.usgs.gov/publications/field_manual/chapter_16.pdf; www.oie.int/fileadmin/Home/fr/Health_standards/tahm/2.03.07_DVE.pdf","USGS; OiE","",""],
+["Domestic","Carnivores ","IV / PM","Hookworm Infection","Parasite","Ancylostoma spp.","http://www.cdc.gov/dpdx/hookworm/dx.html http://www.merckvetmanual.com/mvm/digestive_system/gastrointestinal_parasites_of_small_animals/hookworms_in_small_animals.html","CDC Merck","",""],
+["Domestic / Free-ranging","Crustacean","IV / PM","Crayfish plague","Fungus","Aphanomyces astaci","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.2.01_CRAYFISH_PLAGUE.pdf","OIE","","Y"],
+["Domestic / Free-ranging","Piscine","IV / PM","Epizootic ulcerative syndrome","Fungus","Aphanomyces�invadans","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.3.02_EUS.pdf","OIE","","Y"],
+["NA","Human ","IV","Arenavirus haemorrhagic fevers","Virus","Arenavirus spp.","http://ecdc.europa.eu/en/healthtopics/arenavirus/Pages/factsheet-health-professionals.aspx","ECDC","Group of viruses * separate*",""],
+["Domestic","Aves","IV / PM","Turkey rhinotracheitis","Virus","Avian metapneumovirus","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.03.15_TURKEY_RHINO.pdf","OIE","","Y"],
+["Free-ranging","Aves / birds","IV / PM","Avian pox; fowl pox; avian diphtheria; contagious epithelioma","Virus","Avian pox virus","www.nwhc.usgs.gov/publications/field_manual/chapter_19.pdf","USGS","",""],
+["Domestic","Aves","IV / PM","Fowl pox","Virus","Avipox","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.03.10_FOWLPOX.pdf","OIE","","N"],
+["Free-ranging","Equidae (not specific for wildlife)","IV / PM","Equine piroplasmosis","Parasite","Babesia caballi and Theileria equi","(not specific for wildlife) www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/EQUINE_PRIOPLASMOSIS.pdf","OiE","","Y"],
+["Domestic","Equidae","IV / PM","Equine piroplasmosis","Protozoan","Babesia caballi; Theileria equi","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/EQUINE_PRIOPLASMOSIS.pdf http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.05.08_EQUINE_PIROPLASMOSIS.pdf","OIE","","Y"],
+["NA","Human ","IV","Babesiosis","Protozoann","Babesia spp.","http://ecdc.europa.eu/en/healthtopics/babesiosis/Pages/Factsheet_health_professionals.aspx","ECDC","",""],
+["Domestic","Bovinae","IV / PM","Bovine babesiosis","Protozoan","Babesia spp.","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/BOVINE_BABESIOSIS.pdf http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.04.02_BOVINE_BABESIOSIS.pdf","OIE","","Y"],
+["Free-ranging","Ruminants","IV / PM","Babesiosis","Parasite","Babesia spp.","Yabsley, Int J Parasitol Parasites Wildl, 2012, 22:18-31; www.ncbi.nlm.nih.gov/pubmed/24533312; Zanet, Parasit Vectors, 2014, 17:7-70; www.ncbi.nlm.nih.gov/pubmed/24533742; Michel, Vet Res, 2014, 13:45-65; www.ncbi.nlm.nih.gov/pubmed/24925474","pubmed","","Y"],
+["NA","Human ","IV","Anthrax","Bacterium","Bacillus anthracis","http://www.cdc.gov/anthrax/basics/diagnosis.html http://www.asm.org/images/PSAB/LRN/Anthrax%20Aug2015.pdf","CDC ASM","","Y"],
+["Domestic","Multihost","IV / PM","Anthrax","Bacterium","Bacillus anthracis","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.01.01_ANTHRAX.pdf","OIE","","Y"],
+["Free-ranging","Multihost","IV / PM","Anthrax","Bacterium","Bacillus anthracis","www.aphaea.eu/cards/species   (pending)","APHAEA","",""],
+["Domestic","Carnivores","IV / PM","Cat Scratch disease","Bacterium","Bartonella henselae","http://www.cdc.gov/bartonella/clinicians/index.html http://www.cdc.gov/bartonella/veterinarians/index.html","CDC","",""],
+["NA","Human ","IV","Bartonella quintana infection; Trench fever","Bacterium","Bartonella quintana","http://www.cdc.gov/bartonella/clinicians/index.html http://ecdc.europa.eu/en/healthtopics/emerging_and_vector-borne_diseases/louse-borne-diseases/Pages/bartonella-quintana-trench-fever.aspx","ECDC CDC","",""],
+["Domestic / Free-ranging","Amphibian","IV / PM","Chytrid fungus","Fungus","Batrachochytrium dendrobatidis","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.1.01_INF_BATRACHOCHYRIUM.pdf","OIE","","Y"],
+["Domestic","Multihost","IV / PM","Raccoon Roundworm Infection","Parasite","Baylisascaris procyonis","http://www.cdc.gov/parasites/baylisascaris/health_professionals/index.html#dx","CDC","",""],
+["Domestic","Multihost","IV / PM","Bluetongue","Virus","Bluetongue virus","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/BLUETONGUE.pdf","OIE","","Y"],
+["Free-ranging","Ruminants","IV / PM","Bluetongue","Virus","Bluetongue virus (Orbivirus)","www.aphaea.eu/cards/species   (pending); www.ncbi.nlm.nih.gov/pubmed/23941229","APHAEA, OiE","","Y"],
+["Domestic / Free-ranging","Mollusc","IV / PM","Bonamia exitiosa","Protozoan","Bonamia exitiosa","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.4.02_B_EXIT.pdf","OIE","","Y"],
+["Domestic / Free-ranging","Mollusc","IV / PM","Bonamia ostreae","Protozoan","Bonamia ostreae","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.4.03_B_OST.pdf","OIE","","Y"],
+["Domestic","Caprinae","IV / PM","Border disease","Virus","Border disease virus (Pestivirus)","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.07.01_BORDER_DIS.pdf","OIE","",""],
+["NA","Human ","IV","Pertussis","Bacterium","Bordetella pertussis","http://www.cdc.gov/pertussis/clinical/diagnostic-testing/index.html http://www.cdc.gov/vaccines/pubs/surv-manual/chpt10-pertussis.html#laboratory","CDC","","Y"],
+["Domestic","Multihost","IV / PM","Lyme disease; Borreliosis","Bacterium; spirochete","Borrelia burgdorferi","http://www.cfsph.iastate.edu/Factsheets/pdfs/lyme_disease.pdf","CFSPH","",""],
+["NA","Human ","IV","Borreliosis; Lyme disease","Bacterium; Spirochete","Borrelia burgdorferi sensu lato","http://ecdc.europa.eu/en/healthtopics/emerging_and_vector-borne_diseases/tick_borne_diseases/lyme_disease/factsheet-health-professionals/Pages/factsheet_health_professionals.aspx","ECDC","",""],
+["NA","Human ","IV","Louse-borne relapsing fever","Bacterium; Spirochete","Borrelia recurrentis","http://ecdc.europa.eu/en/healthtopics/emerging_and_vector-borne_diseases/louse-borne-diseases/Pages/louse-borne-relapsing-fever.aspx http://www.cdc.gov/relapsing-fever/clinicians/#labtest","ECDC CDC","",""],
+["NA","Human ","IV","Tick-borne relapsing fever","Bacterium; Spirochete","Borrelia spp.","http://ecdc.europa.eu/en/healthtopics/emerging_and_vector-borne_diseases/tick_borne_diseases/tick_borne_relapsing_fever/factsheet-for-health-professionals/Pages/default.aspxhttp://www.cdc.gov/relapsing-fever/clinicians/#labtest","ECDC CDC","",""],
+["Domestic","Bovinae","IV / PM","Infectious bovine rhinotracheitis; infectious�pustular�vulvovaginitis","Virus","Bovine herpesvirus 1","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.04.13_IBR_IPV.pdf","OIE","","Y"],
+["Free-ranging","Ruminants (non bovidae)","IV","Infectious bovine rhinotracheitis/ infectious pustular vulvovaginitis","Virus","Bovine herpesvirus 1","Kalman, J Wild Dis, 2005, 41: 482-488; www.ncbi.nlm.nih.gov/pubmed/16244057; (wild cattle included in OIE:) www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.04.13_IBR_IPV.pdf","pubmed, OiE","","Y"],
+["Free-ranging","Multihost","IV / PM","Infectious bovine rhinotracheitis/ infectious pustular vulvovaginitis","Virus","Bovine herpesvirus 1","Lupton, J Wildl Dis, 1980, 16:117-123; www.ncbi.nlm.nih.gov/pubmed/7189559","pubmed","","Y"],
+["Domestic","Bovinae","IV / PM","Enzootic bovine leukosis","Virus","Bovine leukemia virus (Retrovirus)","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.04.11_EBL.pdf","OIE","","Y"],
+["Domestic","Bovinae","IV / PM","Bovine viral diarrhoea","Virus","Bovine viral diarrhoea virus (Pestivirus)","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.04.08_BVD.pdf","OIE","","Y"],
+["Domestic","Multihost","IV / PM","Brucellosis","Bacterium","Brucella abortus or melitensis or suis","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.04.03_BOVINE_BRUCELL.pdf","OIE","","Y"],
+["Domestic","Caprinae","IV / PM","Ovine epididymitis","Bacterium","Brucella ovis","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.07.09_OVINE_EPID.pdf","OIE","","Y"],
+["Free-ranging","Ruminants","IV / PM","Brucellosis","Bacterium","Brucella ovis","www.oie.int/doc/ged/D12397.PDF; Godfroid, Croat Med J, 2010, 51:296-305; www.ncbi.nlm.nih.gov/pmc/articles/PMC2931434/; ","OiE, pubmed","","Y"],
+["NA","Human ","IV","Brucellosis","Bacterium","Brucella spp.","http://www.cdc.gov/brucellosis/clinicians/index.html http://www.who.int/zoonoses/diseases/Brucellosissurveillance.pdf http://www.asm.org/images/PSAB/LRN/Brucella%20Aug2015.pdf","CDC WHO ASM","","Y"],
+["Free-ranging","Ruminants","IV / PM","Brucellosis","Bacterium","Brucella spp.","www.oie.int/doc/ged/D12397.PDF; Godfroid, Croat Med J, 2010, 51:296-305; www.ncbi.nlm.nih.gov/pmc/articles/PMC2931434/; www.aphaea.eu/cards/species   (pending)","OIE, pubmed, APHAEA","","Y"],
+["Free-ranging","Marine mammals","IV / PM","Brucellosis","Bacterium","Brucella spp.","www.cfsph.iastate.edu/Factsheets/pdfs/brucellosis_marine.pdf","CFSPH","",""],
+["Domestic","Equidae","IV / PM","Glanders","Bacterium","Burkholderia mallei","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/GLANDERS.pdf http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.05.11_GLANDERS.pdf","OIE","","Y"],
+["Free-ranging","Equidae (not specific for wildlife)","IV / PM","Glanders","Bacterium","Burkholderia mallei","(not specific for wildlife) www.oie.int/fileadmin/Home/fr/Health_standards/tahm/2.05.11_GLANDERS.pdf","OiE","","Y"],
+["NA","Human","IV","Glanders or Meliodosis","Bacterium","Burkholderia mallei; pseudomallei","http://www.asm.org/images/PSAB/LRN/Burkholderia%20Aug2015.pdf","ASM","",""],
+["Domestic","Camelidae","IV / PM","Camelpox","Virus","Camelpox virus","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.09.02_CAMELPOX.pdf","OIE","","Y"],
+["Domestic","Bovinae","IV / PM","Bovine genital campylobacteriosis","Bacterium","Campylobacter fetus subsp. Venerealis","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.04.05_BGC.pdf","OIE","","Y"],
+["Free-ranging","Ruminants","IV / PM","Campylobacter jejuni","Bacterium","Campylobacter jejuni","www.aphaea.eu/cards/species   (pending)","APHAEA","",""],
+["NA","Human ","IV","Campylobacteriosis","Bacterium","Campylobacterium spp.","http://ecdc.europa.eu/en/healthtopics/campylobacteriosis/basic_facts/Pages/Factsheet_generalpublic.aspx","ECDC","","Y"],
+["Domestic","Caprinae","IV / PM","Caprine Arthitis/encephalitis","Virus","Caprine arthitis/encephalitis virus (Lentivirus)","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.07.03-04_CAE_MV.pdf","OIE ","","Y"],
+["NA","Human ","IV","Chikungunya","Virus","Chikungunya virus","http://ecdc.europa.eu/en/healthtopics/chikungunya_fever/factsheet-health-professionals/Pages/factsheet-for-health-professionals.aspx http://www.who.int/mediacentre/factsheets/fs327/en/ http://www.cdc.gov/chikungunya/hc/diagnostic.html","ECDC CDC WHO","",""],
+["NA","Human ","IV","Chlamydia","Bacterium","Chlamydia trachomatis","http://ecdc.europa.eu/en/healthtopics/chlamydia/factsheet-health-professionals/Pages/factsheet-health-professionals.aspx","ECDC","","Y"],
+["Domestic","Caprinae","IV / PM","Enzootic abortion; ovine chlamydiosis","Bacterium","Chlamydophila abortus","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.07.07_ENZ_ABOR.pdf","OIE","","Y"],
+["Free-ranging","Aves / birds","IV","Enzootic abortion; ovine chlamydiosis","Bacterium","Chlamydophila abortus","Lemus, Plos One, 2010, 5(10):e13512; hwww.ncbi.nlm.nih.gov/pubmed/20976071","pubmed","","Y"],
+["Free-ranging","Ruminants","IV","Enzootic abortion; ovine chlamydiosis","Bacterium","Chlamydophila abortus","Salinas, Vet Microbiol, 2009, 135: 45-53; www.ncbi.nlm.nih.gov/pubmed/19010612; Marreros, J Wildl Dis, 2011, 47:530-543; www.ncbi.nlm.nih.gov/pubmed/21719818; Holzwarth, J Vet Diagn Invest, 2011, 23:333-337; www.ncbi.nlm.nih.gov/pubmed/21398458","pubmed","","Y"],
+["Domestic","Aves","IV / PM","Avian chlamydiosis","Bacterium","Chlamydophila psittaci","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.03.01_AVIAN_CHLAMYD.pdf","OIE","","Y"],
+["Free-ranging","Aves / birds","IV / PM","Avian chlamydiosis","Bacterium","Chlamydophila psittaci","Harkinezhad, Vet Microbiol, 2009 16;135:68:77; www.ncbi.nlm.nih.gov/pubmed/19054633; Kaleta, Avian Pathol, 2003, 32(5):435-61; www.ncbi.nlm.nih.gov/pubmed/14522700; ","pubmed","","Y"],
+["Domestic","Multihost","IV","Old world screwworm","Parasite","Chrysomya bezziana","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/SCREWWORM.pdf","OIE","","Y"],
+["Domestic","Suidae","IV / PM","Classical swine fever; hog cholera","Virus","Classical swine fever virus (pestivirus)","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/CLASSICAL_SWINE_FEVER.pdf http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.08.03_CSF.pdf","OIE","","Y"],
+["Free-ranging","Suidae / wild boar","IV / PM","Classical swine fever","Virus","Classical swine fever virus (Pestivirus)","www.aphaea.eu/cards/species   (pending)","APHAEA","","Y"],
+["NA","Human ","IV","Botulism","Bacterium","Clostridium botulinum","http://ecdc.europa.eu/en/healthtopics/botulism/Pages/Factsheet_generalpublic.aspx http://www.asm.org/images/PSAB/Botulism_July2013.pdf","ECDC ASM","","Y"],
+["Free-ranging","Aves / birds","IV / PM","Botulism","Bacterium","Clostridium botulinum toxin A to G","www.nwhc.usgs.gov/publications/field_manual/chapter_38.pdf","USGS","",""],
+["NA","Human ","IV","Tetanus","Bacterium","Clostridium tetani","http://www.cdc.gov/tetanus/clinicians.html","CDC","","Y"],
+["Domestic","Multihost","IV","New world screwworm","Parasite","Cochliomyia hominivorax","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/SCREWWORM.pdf","OIE","","Y"],
+["Free-ranging","Multihost","IV / PM","Screwworm (new world, old world)","Parasite","Cochliomyia hominivorax; Chrysomya bezziana","www.eazwv.org/sites/default/files/Files/Infectious%20Diseases%20Handbook/Fact%20Sheets/121%20Screwworm%20%28New%20World%29.pdf; (not specific wildlife:) web.oie.int/eng/normes/MMANUAL/2008/pdf/2.01.10_SCREWW.pdf","EAZVW, OiE","","Y"],
+["Domestic","Aves","IV / PM","Avian infectious bronchitis","Virus","Coronavirus","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.03.02_AIB.pdf","OIE","","Y"],
+["Free-ranging","Aves / birds","IV","Avian infectious bronchitis","Virus","Coronavirus","Hughes, Emerg Infect Dis, 2009, 15:1091-1094; www.ncbi.nlm.nih.gov/pubmed/19624927; Muradrasoli, PLoS One, 2010, 5(10):e13640; www.ncbi.nlm.nih.gov/pubmed/21060827; ","pubmed","","Y"],
+["NA","Human ","IV","Diptheria","Bacterium","Corynebacterium diphtheriae; ulcerans","http://www.cdc.gov/diphtheria/downloads/dip-collection.pdf","CDC","","Y"],
+["NA","Human ","IV","Cowpox","Virus","Cowpox virus (Orthopox)","http://www.merckvetmanual.com/mvm/integumentary_system/pox_diseases/cowpox_virus_infections_in_cats_and_other_species.html","MERCK","no official protocols for human sampling",""],
+["NA","Human ","IV","Q fever","Bacterium","Coxiella burnetii","http://www.cdc.gov/qfever/symptoms/index.html#lab http://www.asm.org/images/PSAB/LRN/Coxiella%20Aug2015.pdf","CDC ASM","","Y"],
+["Free-ranging","Ruminants","IV / PM","Q fever","Virus","Coxiella burnetii","www.aphaea.eu/cards/species   (pending)","APHAEA","",""],
+["Free-ranging","Multihost","IV / PM","Q fever","Bacterium","Coxiella burnetti","Gonzalez-Barrio, Emerg Infect Dis, 2015, 21:1055-1058; www.ncbi.nlm.nih.gov/pubmed/25988670; Pascussi, Vector Borne Zoonotic Dis, 2015, 15:404-411; www.ncbi.nlm.nih.gov/pubmed/26134933; Thompson, Zoonoses Public Health, 2012, 59:553-560; www.ncbi.nlm.nih.gov/pubmed/22639912","pubmed","","Y"],
+["Domestic","Multihost","IV / PM","Q fever","Bacterium","Coxiella burnettii","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.01.12_Q_FEVER.pdf","OIE","","Y"],
+["Domestic","Multihost","IV / PM","Crimean Congo Haemorrhagic fever","Virus","Crimean?Congo haemorrhagic fever virus","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.01.03b_CCHF.pdf","OIE","","Y"],
+["Free-ranging","Multihost","IV / PM","Crimean Congo haemorrhagic disease","Virus","Crimean?Congo haemorrhagic fever virus","SWANEPOEL R.& PAWESKA J.T. (2011). Crimean-Congo hemorrhagic fever. In: Oxford Textbook of Zoonosis: Biology, Clinical Practise and Public Health Control, Second Edition. Palmer S.R., Soulsby L., Torgerson P.R. & Brown D.W.G.,eds. Oxford University Press, UK, pp. 287?293. ; NALCA A.&WHITEHOUSE C.A. (2007). Crimean?Congo hemorrhagic fever virus infection among animals. In: Crimean?Congo Hemorrhagic Fever: A Global Perspective, Ergonul O. & Whitehouse C.A., eds. Springer: Dordrecht, Netherlands, 155?165.; (not specific for wildlife:) www.oie.int/fileadmin/Home/fr/Health_standards/tahm/2.01.03b_CCHF.pdf","OiE, pubmed","","Y"],
+["NA","Human ","IV","Cryptococcosis","Fungus","Cryptococcus neoformans","http://www.cdc.gov/fungal/diseases/cryptococcosis-neoformans/health-professionals.html","CDC","",""],
+["Domestic","Multihost","IV / PM","Cryptococcosis","Fungus","Cryptococcus neoformans","http://www.cdc.gov/fungal/diseases/cryptococcosis-neoformans/health-professionals.html http://www.merckvetmanual.com/mvm/generalized_conditions/fungal_infections/cryptococcosis.html","CDC Merck","",""],
+["NA","Human ","IV","Cryptosporidiosis","Bacterium","Cryptosporidium parvum","http://www.cdc.gov/parasites/crypto/diagnosis.html http://www.cdc.gov/dpdx/resources/pdf/benchAids/Crypto_benchaid.pdf","CDC","","Y"],
+["Domestic","Multihost","IV / PM","Cryptosporidiosis","Protozoan","Cryptosporidium spp.","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.09.04_CRYPTO.pdf","OIE","",""],
+["Domestic / Free-ranging","Piscine","IV / PM","Infection with�Gyrodactylus salaris","Parasite","Cyrodactylus salaris","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.3.03_GYRO.pdf","OIE","","Y"],
+["NA","Human ","IV","Dengue fever","Virus","Dengue virus (Flavivirus)","http://ecdc.europa.eu/en/healthtopics/dengue_fever/factsheet-for-health-professionals/Pages/Factsheet_health_professionals.aspx http://www.cdc.gov/dengue/clinicalLab/index.html","ECDC CDC","","Y"],
+["Domestic","Bovinae","IV / PM","Dermatophilosis","Bacterium","Dermatophilus congolensis","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.04.10_DERMATOPHIL.pdf","OIE","",""],
+["Domestic","Carnivores","IV / PM","Tapeworm ","Parasite","Dipylidium caninum","http://www.cdc.gov/dpdx/dipylidium/dx.html http://www.merckvetmanual.com/mvm/digestive_system/gastrointestinal_parasites_of_small_animals/tapeworms_in_small_animals.html","CDC Merck","",""],
+["Domestic","Aves","IV / PM","Duck hepatitis ","Virus","Duck hepatitis virus","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.03.08_DVH.pdf","OIE","","Y"],
+["Free-ranging","Aves / birds (Anatidae / ducks, geese, swans)","IV / PM","Duck viral hepatitis type II (duck hepatitis virus type I, Picornavirus; no literature found)","Virus","Duck viral hepatitis virus, astrovirus","Chu, JoV, 2012, 86(24): 13772-13778; www.ncbi.nlm.nih.gov/pubmed/23035212","pubmed","","Y"],
+["Domestic","Multihost","IV / PM","Eastern equine encephalomyelitis","Virus","Eastern equine encephalomyelitis virus","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.05.05_EQUINE_ENCEPH.pdf","OIE","","Y"],
+["Free-ranging","Aves / birds","IV / PM","Equine encephalomyelitis (Eastern)","Virus","Eastern equine encephalomyelitis virus","McLean, J Wildl Dis, 1995, 31:502-508; www.ncbi.nlm.nih.gov/pubmed/8592381; Komar, Am J Trop Med Hyg, 1999, 60: 387-391; www.ncbi.nlm.nih.gov/pubmed/10466964","pubmed","","Y"],
+["Free-ranging","Reptiles","IV","Equine encephalomyelitis (Eastern)","Virus","Eastern equine encephalomyelitis virus","Bingham, Am J Trop Med Hyg, 2012, 87: 1140-1144; www.ncbi.nlm.nih.gov/pubmed/23033405","pubmed","","Y"],
+["NA","Human ","IV / PM","Ebola (Zaire, Sudan, Reston, Tai Forest, Bundibugyo)","Virus","Ebola virus","http://ecdc.europa.eu/en/healthtopics/ebola_marburg_fevers/patient-and-case-management/Pages/default.aspx http://www.cdc.gov/vhf/ebola/healthcare-us/laboratories/specimens.html","ECDC CDC","",""],
+["Domestic","Multihost","IV / PM","Echinococcocisis","Parasite","Echinococcus multilocularis or granulosis","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.01.04_ECHINOCOCCOSIS.pdf","OIE","","Y"],
+["Domestic","Multihost","IV / PM","Echinococcocisis","Protozoan","Echinococcus multilocularis or granulosis","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.01.04_ECHINOCOCCOSIS.pdf","OIE","","Y"],
+["NA","Human ","IV","Echinococcosis","Parasite","Echinococcus spp.","http://www.cdc.gov/parasites/echinococcosis/health_professionals/index.html","CDC","","Y"],
+["Free-ranging","Multihost","IV / PM","Echinococcosis","Parasite","Echinococcus spp.","www.aphaea.eu/cards/species   (pending)","APHAEA","",""],
+["Domestic","Multihost","IV / PM","Heartwater","Bacterium","Ehrlichia ruminantium","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/HEARTWATER_FINAL.pdf","OIE","","Y"],
+["Free-ranging","Multihost","IV / PM","Heartwater","Parasite","Ehrlichia ruminantium","Peter, Trends Parasitol, 2002, 18:214-218;www.ncbi.nlm.nih.gov/pubmed/11983602; (not specific for wildlife:) www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.01.06_HEARTWATER.pdf","pubmed, OiE","","Y"],
+["Free-ranging","Suidae / wild boar","IV","Encephalomyocarditis","Virus","Encephalomyocarditis virus (Cardiovirus, Picronaviridae)","Maurice, Epidemiol Infect, 2005, 133:547-557; www.ncbi.nlm.nih.gov/pubmed/15962562","pubmed","",""],
+["Free-ranging","Rodentia / rodents","IV / PM","Encephalomyocarditis","Virus","Encephalomyocarditis virus (Cardiovirus, Picronaviridae)","www.aphaea.eu/cards/species   (pending)","APHAEA","",""],
+["NA","Human ","IV","Threadworm; pinworm","Parasite","Enterobius vermicularis ","http://www.cdc.gov/parasites/pinworm/diagnosis.html","ECDC","",""],
+["NA","Human ","IV","Enteroviruses (non-polio)","Virus","Enterovirus spp. ","http://www.cdc.gov/non-polio-enterovirus/lab-testing/specimen-collection.html","ECDC","",""],
+["NA","Human ","IV","Hand foot and mouth disease","Virus","Enterovirus spp. ","http://www.cdc.gov/hand-foot-mouth/about/diagnosis.html http://www.wpro.who.int/publications/docs/GuidancefortheclinicalmanagementofHFMD.pdf?ua=1","ECDC WHO","",""],
+["Domestic / Free-ranging","Piscine","IV / PM","Epizootic haematopoietic necrosis","Virus","Epizootic haematopoietic necrosis virus","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.3.01_EHN.pdf","OIE","","Y"],
+["Domestic","Multihost","IV / PM","Epizootic haemorrhagic disease; Ibaraki","Virus","Epizootic haemorrhagic disease virus (Reovirus)","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/EPIZOOTIC_HEAMORRHAGIC_DISEASE.pdf","OIE","","Y"],
+["Free-ranging","Ruminants / deer / cervidae","IV / PM","Epizootic hemorrhagic disease","Virus","Epizootic hemorrhagic disease virus (Orbivirus, Reoviridae)","www.michigan.gov/dnr/0,1607,7-153-10370_12150-26647--,00.html; http://www.cfsph.iastate.edu/Factsheets/pdfs/epizootic_hemorrhagic_disease.pdf; Stallknecht, Vet Ital, 2004, 40: 203-207; www.ncbi.nlm.nih.gov/pubmed/20419663","Michigan state, CFSPH, pubmed","not in Europe currently, can infect cattle","Y"],
+["NA","Human ","IV","Infectious mononucleosis; glandular fever or pfeiffer","Virus","Epstein-Barr virus","http://www.cdc.gov/epstein-barr/laboratory-testing.html","CDC","",""],
+["Domestic","Equidae","IV / PM","Equine viral arteritis","Virus","Equine arteritis virus","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.05.10_EVA.pdf","OIE","","Y"],
+["Free-ranging","Equidae (not specific for wildlife)","IV / PM","Equine viral arteritis","Virus","Equine arteritis virus","(not specific for wildlife) www.merckvetmanual.com/mvm/generalized_conditions/equine_viral_arteritis/overview_of_equine_viral_arteritis.html","OiE","","Y"],
+["Free-ranging","Equidae (not specific for wildlife)","IV / PM","Equine rhinopneumonitis","Virus","Equine herpesvirus 1 and 4","(not specific for wildlife) www.oie.int/fileadmin/Home/fr/Health_standards/tahm/2.05.09_EQUINE_RHINO.pdf","OiE","","Y"],
+["Domestic","Equidae","IV / PM","Equine rhinopneumonitis","Virus","Equine herpesvirus 1; Equine herpesvirus 4","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.05.09_EQUINE_RHINO.pdf","OIE","","Y"],
+["Domestic","Equidae","IV / PM","Equine infectious anemia","Virus","Equine infectious anemia virus (retrovirus)","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.05.06_EIA.pdf","OIE","","Y"],
+["Domestic","Suidae","IV / PM","Erysipelothrix Infection; Diamond skin disease","Bacterium","Erysipelothrix rhusiopathiae","http://www.merckvetmanual.com/mvm/generalized_conditions/erysipelothrix_rhusiopathiae_infection/overview_of_erysipelothrix_rhusiopathiae_infection.html","Merck","",""],
+["NA","Human ","IV","EHEC STEC","Bacterium","Escherichia coli","http://www.cdc.gov/ecoli/clinicians.html","CDC","","Y"],
+["Free-ranging","Multihost","IV / PM","Pathogenic Escherichia coli","Bacterium","Escherichia coli","www.aphaea.eu/cards/species   (pending)","APHAEA","",""],
+["Free-ranging","Lagomorphs / rabbits","IV / PM","European brown hare syndrome","Virus","European brown hare syndrome virus (Calicivirus)","www.aphaea.eu/cards/species   (pending)","APHAEA","",""],
+["NA","Human ","IV","Yellow fever","Virus","Flavivirus","http://ecdc.europa.eu/en/healthtopics/yellow_fever/factsheet-health-professionals/Pages/factsheet_health_professionals.aspx http://www.cdc.gov/yellowfever/healthCareProviders/healthCareProviders-Diagnostic.html","ECDC CDC ","",""],
+["Domestic","Multihost","IV / PM","Foot and mouth disease","Virus","Foot and mouth disease virus (picornavirus)","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/FOOT_AND_MOUTH_DISEASE.pdf","OIE","","Y"],
+["Free-ranging","Multihost","IV / PM","Foot and mouth disease","Virus","Footh and mouth disease virus (Aphthovirus, Picornaviridae)","(source for multiple species with reference:) wildpro.twycrosszoo.org/S/00dis/viral/Disease_FMDInfection/fmdspeciesclin.htm; (not specific for wildlife) www.oie.int/fileadmin/Home/fr/Health_standards/tahm/2.01.05_FMD.pdf","wildpro, OiE","","Y"],
+["NA","Human ","IV","Tularemia","Bacterium","Francisella tularensis","http://www.asm.org/images/PSAB/LRN/Tularemia%20Aug2015.pdf http://www.cdc.gov/tularemia/clinicians/index.html#diagnostic http://ecdc.europa.eu/en/healthtopics/Tularaemia/Pages/factsheet_health_professionals.aspx","CDC ASM","","Y"],
+["Domestic","Multihost","IV / PM","Tularemia","Bacterium","Francisella tularensis","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.01.18_TULAREMIA.pdf","OIE","","Y"],
+["Domestic","Multihost","IV / PM","Tularemia; Rabbit fever","Bacterium","Francisella tularensis","http://www.cfsph.iastate.edu/Factsheets/pdfs/tularemia.pdf","CFSPH","",""],
+["Free-ranging","Multihost","IV / PM","Tularemia","Bacterium","Francisella tularensis","www.aphaea.eu/cards/species   (pending)","APHAEA","",""],
+["Domestic","Aves","IV / PM","Avian infectious laryngotracheitis","Virus","Gallid herpesvirus 1","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.03.03_AVIAN_INF_LARYNGO.pdf","OIE","","Y"],
+["Free-ranging","Aves / birds (Galliform)","IV / PM","Avian infectious laryngotracheitis","Virus","Gallid herpesvirus 1","www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.03.03_AVIAN_INF_LARYNGO.pdf","pubmed","","Y"],
+["NA","Human ","IV","Giardiasis","Protozoann","Giardia lamblia","http://www.cdc.gov/parasites/giardia/diagnosis.html","CDC","","Y"],
+["Domestic","Multihost","IV / PM","Giardiosis","Protozoan","Giardia spp.","http://www.merckvetmanual.com/mvm/digestive_system/giardiasis/overview_of_giardiasis.html","Merck","",""],
+["NA","Human ","IV","Haemophilus influenzae infection","Bacterium","Haemophilus influenzae group B","http://www.cdc.gov/hi-disease/about/diagnosis-treatment.html","ECDC","","Y"],
+["Free-ranging","Rodentia / rodents","IV / PM","Hantavirus","Virus","Hanta virus (Bunyaviridae)","www.aphaea.eu/cards/species   (pending)","APHAEA","",""],
+["NA","Human ","IV","Hantavirus infection","Virus","Hantavirus","http://ecdc.europa.eu/en/healthtopics/hantavirus/factsheet-health-professionals/Pages/factsheet_health_professionals.aspx http://www.cdc.gov/hantavirus/health-care-workers/specimen-submission/protocol.html http://www.cdc.gov/hantavirus/technical/hps/diagnostics.html","ECDC CDC","",""],
+["Domestic","Rodents","IV / PM","Hantavirus Pulmonary Syndrome (HPS)","Virus","Hantavirus","http://www.cfsph.iastate.edu/Factsheets/pdfs/hantavirus.pdf","CFSPH","",""],
+["NA","Human ","IV","Hepatitis A","Virus","Hepatitis A virus (picorna)","http://ecdc.europa.eu/en/healthtopics/hepatitis_A/factsheets/Pages/factsheet-professionals.aspx","ECDC","","Y"],
+["NA","Human ","IV","Hepatitis B","Virus","Hepatitis B virus (hepadna)","http://ecdc.europa.eu/en/healthtopics/viral-hepatitis/Pages/case-definition.aspx http://www.cdc.gov/hepatitis/hbv/hbvfaq.htm#overview http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2095015/","ECDC CDC PubMed","","Y"],
+["NA","Human ","IV","Hepatitis C","Virus","Hepatitis C virus (hepaci)","http://ecdc.europa.eu/en/healthtopics/viral-hepatitis/Pages/case-definition.aspx http://www.cdc.gov/hepatitis/hcv/hcvfaq.htm#section3 http://www.ncbi.nlm.nih.gov/pubmed/9305663","ECDC CDC PubMed","","Y"],
+["NA","Human","IV","Hepatitis D","Virus","Hepatitis D virus ","http://www.cdc.gov/hepatitis/hdv/index.htm","CDC","Only in HBV positive individuals",""],
+["NA","Human","IV","Hepatitis E","Virus","Hepatitis E virus","http://www.cdc.gov/hepatitis/hev/hevfaq.htm#section4","CDC","",""],
+["Free-ranging","Multihost","IV / PM","Hepatitis E virus","Virus","Hepatitis E virus (Hepeviruses)","www.aphaea.eu/cards/species   (pending)","APHAEA","",""],
+["Domestic / Free-ranging","Crustacean","IV / PM","Necrotising hepatopancreatitis","Bacterium","Hepatobacter penaei","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.2.04_NHP.pdf","OIE","","Y"],
+["Domestic","Aves","IV / PM","Mareks' disease","Virus","Herpesvirus","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.03.13_MAREK_DIS.pdf","OIE","","N"],
+["Domestic","Bovinae","IV / PM","Malignant catarrhal fever ","Virus","Herpesvirus spp. (OvHV-2, AIHV-1, CpHV-2, MCFV-WTD) ","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/MALIGNANT_CATHARRAL_FEVER.pdf http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.04.15_MCF.pdf","OIE","","N"],
+["Free-ranging","Ruminants","IV / PM","Malignant catarrhal fever","Virus","Herpesvirus spp. (OvHV-2, AIHV-1, CpHV-2, MCFV-WTD) ","Vikoren, J Wildl Dis, 2006, 42:797-807; www.ncbi.nlm.nih.gov/pubmed/17255446; Vikoren, J Wildl Dis, 2015, 51:471-474; www.ncbi.nlm.nih.gov/pubmed/25574807","pubmed","","Y"],
+["Domestic","Equidae","IV / PM","Epizootic lymphangitis","Fungus","Histoplasma capsulatum var. farciminosum","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.05.04_EPIZ_LYMPHANGITIS.pdf","OIE","",""],
+["Domestic","Multihost","IV / PM","Histoplasmosis; Cave disease","Fungus","Histoplasma spp.","http://www.cdc.gov/fungal/diseases/histoplasmosis/health-professionals.html","CDC","",""],
+["NA","Human ","IV","HIV","Virus","Human Immunodeficiency virus","http://www.cdc.gov/hiv/testing/laboratorytests.html","CDC","","Y"],
+["NA","Human ","IV","Human papillomavirus infection","Virus","Human papillomavirus","http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2095016/","PubMed","",""],
+["Domestic","Aves","IV / PM","Infectious bursal disease; Gumboro disease","Virus","Infectious bursal disease virus","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.03.12_IBD.pdf","OIE","","Y"],
+["Free-ranging","Aves / birds (Anatidae / ducks mainly)","IV / PM","Infectious bursal disease; Gumboro","Virus","Infectious bursal disease virus","Oladele, Vet Res Commun, 2009, 33:111-121; www.ncbi.nlm.nih.gov/pubmed/18663594; Jeon, Virus Res, 2008, 137:153-156; www.ncbi.nlm.nih.gov/pubmed/18652855; Wang, Arch Virol, 2007, 152:1787-1797; www.ncbi.nlm.nih.gov/pubmed/17619114","pubmed","","Y"],
+["Domestic / Free-ranging","Piscine","IV / PM","Infectious haematopoietic necrosis","Virus","Infectious haematopoietic necrosis virus (rhabdovirus)","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.3.04_IHN.pdf","OIE","","Y"],
+["Domestic / Free-ranging","Crustacean","IV / PM","Infectious hypodermal and haematopoietic necrosis","Virus","Infectious hypodermal and haematopoietic necrosis virus","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.2.02_IHHN.pdf","OIE","","Y"],
+["Domestic / Free-ranging","Crustacean","IV / PM","Infectious myonecrosis","Virus","Infectious myonecrosis virus (Totivirus)","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.2.03_%20IMN.pdf","OIE","","Y"],
+["Domestic / Free-ranging","Piscine","IV / PM","Infectious salmon anaemia ","Virus","Infectious salmon anaemia virus (Orthomyxovirus)","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.3.05_ISA.pdf","OIE","","Y"],
+["NA","Human ","IV","Avian Influenza","Virus","Influenza virus","http://www.cdc.gov/flu/avianflu/h7n9/specimen-collection.htm","CDC","","Y"],
+["NA","Human ","IV","Influenza","Virus","Influenza virus","http://www.cdc.gov/flu/professionals/diagnosis/index.htm http://www.asm.org/images/PSAB/Novel_Influenza_July2013.pdf","CDC ASM","Special protocols from Influenza surveillance networks?","Y"],
+["Domestic","Equidae","IV / PM","Equine influenza","Virus","Influenza virus","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.05.07_EQ_INF.pdf","OIE","","Y"],
+["Domestic","Suidae","IV / PM","Swine Influenza","Virus","Influenza virus","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/SWINE_INFLUENZA.pdf","OIE ","",""],
+["Domestic","Suidae","IV / PM","Swine Influenza","Virus","Influenza virus","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.08.08_SWINE_INF.pdf","OIE","",""],
+["Domestic","Aves","IV / PM","Highly Pathogenic Avian Influenza (HPAI); Low Pathogenic Avian Influenza (LPAI)","Virus","Influenza virus","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/HPAI.pdf http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.03.04_AI.pdf","OIE","","Y"],
+["Domestic","Carnivores","IV / PM","Canine influenza","Virus","Influenza virus","https://ahdc.vet.cornell.edu/news/civ.cfm#dect","Cornell Uni","",""],
+["Free-ranging","Aves / birds","IV / PM","Avian Influenza","Virus","Influenza virus","www.aphaea.eu/cards/species   (pending)","APHAEA","",""],
+["Free-ranging","Equidae (not specific for wildlife)","IV / PM","Equine Influenza","Virus","Influenza virus","(not specific for wildlife)www.oie.int/fileadmin/Home/fr/Health_standards/tahm/2.05.07_EQ_INF.pdf","OiE","","Y"],
+["Domestic","Caprinae","IV / PM","Ovine pulmonary adenocarcinoma; adenomatosis; jaagsiekte","Virus","Jaagsiekte sheep retrovirus","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.07.10_OPA.pdf","OIE","",""],
+["NA","Human ","IV","Japanese encephalitis","Virus","Japanese encephalitis virus","http://ecdc.europa.eu/en/healthtopics/Japanese-encephalitis/basic-facts/Pages/basic_facts.aspx http://www.cdc.gov/japaneseencephalitis/healthcareproviders/healthcareproviders-diagnostic.html","ECDC CDC","",""],
+["Domestic","Multihost","IV / PM","Japanese encephalitis","Virus","Japanese encephalitis virus (Flavivirus)","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/JAPANESE_ENCEPHALITIS.pdf","OIE","","Y"],
+["Free-ranging","Multihost","IV / PM","Japanese encephalitis","Virus","Japanese encephalitis virus (Flavivirus)","Ruiz-Fons, Transbound Emerg Dis, 2015, tbed12369; www.ncbi.nlm.nih.gov/pubmed/25953392; Ohno, J Vet Med Sci, 2009, 71:1035-1039; www.ncbi.nlm.nih.gov/pubmed/19721354","pubmed","","Y"],
+["Free-ranging","Aves / birds (Anatidae / ducks mainly)","IV","Japanese encephalitis","Virus","Japanese encephalitis virus (Flavivirus)","Yang, J Vet Sci, 2011, 12:373-377; www.ncbi.nlm.nih.gov/pubmed/22122903","pubmed","","Y"],
+["Domestic / Free-ranging","Piscine","IV / PM","Koi herpesvirus disease","Virus","Koi herpesvirus","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.3.06_KHVD.pdf","OIE","","Y"],
+["NA","Human ","IV","Lassa fever","Virus","Lassa virus","http://www.cdc.gov/vhf/lassa/diagnosis/index.html","CDC","",""],
+["NA","Human ","IV","Legionnaires disease","Bacterium","Legionella spp.","http://ecdc.europa.eu/en/healthtopics/legionnaires_disease/surveillance/Pages/EU-case-definition.aspx http://www.cdc.gov/legionella/clinicians.html","ECDC CDC","","Y"],
+["NA","Human ","IV","Leishmaniasis","Protozoan","Leishmania spp.","http://ecdc.europa.eu/en/healthtopics/leishmaniasis/Pages/factsheet_health_professionals.aspx http://www.cdc.gov/parasites/leishmaniasis/health_professionals/index.html#dx","ECDC CDC","",""],
+["Domestic","Carnivores","IV / PM","Leishmaniosis","Protozoan","Leishmania spp.","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.01.08_LEISHMANIOSIS.pdf","OIE","","Y"],
+["Free-ranging","Multihost","IV / PM","Leishmaniosis","Protozoa","Leishmania spp.","Roque, Int J Parasitol Parasites Wildl, 2014, 29:251262; www.ncbi.nlm.nih.gov/pubmed/25426421","pubmed","","Y"],
+["NA","Human ","IV","Leptospirosis","Bacterium","Leptospira spp.","http://www.cdc.gov/ncezid/dhcpp/bacterial_special/zoonoses_lab.html http://apps.who.int/iris/bitstream/10665/42667/1/WHO_CDS_CSR_EPH_2002.23.pdf","CDC WHO","","Y"],
+["Domestic","Multihost","IV / PM","Leptospirosis","Bacterium","Leptospira spp.","http://www.cfsph.iastate.edu/Factsheets/pdfs/leptospirosis.pdf","CFSPH","",""],
+["Free-ranging","Multihost","IV / PM","Leptospira spp.","Bacterium, spirochete","Leptospira spp.","www.aphaea.eu/cards/species   (pending)","APHAEA","",""],
+["NA","Human ","IV","Listeriosis","Bacterium","Listeria monocytogenes","http://www.cdc.gov/listeria/diagnosis.html","CDC","","Y"],
+["Domestic","Multihost","IV / PM","Listeriosis","Bacterium","Listeria monocytogenes","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.09.07_LISTERIA_MONO.pdf","OIE","",""],
+["Free-ranging","Multihost","IV / PM","Listeriosis","Bacterium","Listeria monocytogenes","www.aphaea.eu/cards/species   (pending)","APHAEA","",""],
+["Domestic","Bovinae","IV / PM","Lumpy skin disease","Virus","Lumpy skin disease virus (poxvirus)","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/LUMPY_SKIN_DISEASE_FINAL.pdf","OIE","","Y"],
+["Free-ranging","Ruminants","IV / PM","Lumpy skin disease","Virus","Lumpy skin disease virus (Poxvirus)","one chapter in pdf summarizes current knowledge (African) wildlife: www.efsa.europa.eu/sites/default/files/scientific_output/files/main_documents/3986.pdf","EFSA opinion (OiE, card present)","","Y"],
+["Domestic","Rodents","IV / PM","Lymphocytic choriomeningitis","Virus","Lymphocytic choriomeningitis virus (Arenavirus)","http://www.cfsph.iastate.edu/Factsheets/pdfs/lymphocytic_choriomeningitis.pdf","CFSPH","",""],
+["Free-ranging","Rodentia / rodents","IV / PM","Lymphocytic choriomeningitis virus","Virus","Lymphocytic choriomeningitis virus (Arenavirus)","www.aphaea.eu/cards/species   (pending)","APHAEA","",""],
+["Free-ranging","Carnivores","IV / PM","Rabies","Virus","lyssavirus","www.aphaea.eu/cards/species   (pending)","APHAEA","","Y"],
+["Free-ranging","Bats / chiroptera","IV / PM","Rabies","Virus","lyssavirus","www.aphaea.eu/cards/species   (pending); (bats:) Johnson, J Gen Virol, 2008, 89:2662-2672; www.ncbi.nlm.nih.gov/pubmed/18931061;  Freuling, J Gen Virol, 2009, 90:2493-2502; www.ncbi.nlm.nih.gov/pubmed/19515825(sheep EBLV1:) Brookes, Vet Microbiol, 2007, 125:210-223; www.ncbi.nlm.nih.gov/pubmed/17706900","APHAEA, pubmed","",""],
+["Domestic / Free-ranging","Crustacean","IV / PM","White tail disease; White muscle disease","Virus","Macrobrachium sosenbergii nodavirus","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.2.07_WTD.pdf","OIE","","Y"],
+["Domestic","Caprinae","IV / PM","Maedi-visna; ovine progressive pneumonia","Virus","Maedi-visna virus (Lentivirus)","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.07.03-04_CAE_MV.pdf","OIE","","Y"],
+["NA","Human ","IV / PM","Marburg ","Virus","Marburg virus","http://ecdc.europa.eu/en/healthtopics/ebola_marburg_fevers/patient-and-case-management/Pages/default.aspx http://www.cdc.gov/vhf/ebola/healthcare-us/laboratories/specimens.html","ECDC CDC","",""],
+["Domestic / Free-ranging","Mollusc","IV / PM","Marteilia refringens","Protozoan","Marteilia refringens","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.4.04_M_REF.pdf","OIE","","Y"],
+["Domestic","Multihost","IV / PM","MRSA infection","Bacterium","Methicillin-Resistant Staphylococcus aureus ","http://www.cdc.gov/mrsa/lab/index.html http://www.cfsph.iastate.edu/Factsheets/pdfs/mrsa.pdf","CDC  CFSPH","",""],
+["Domestic","Camelidae","IV / PM","MERS; Middle East Respiratory Syndrome","Virus","Middle East Respiratory Syndrome Coronavirus","http://www.oie.int/fileadmin/Home/fr/Media_Center/docs/pdf/Disease_cards/Q_A_MERS-CoV_EN_update_August_2014_Final.pdf","OIE","","N"],
+["NA","Human ","IV","Middle East Respiratory Syndrome Coronavirus (MERS-CoV)","Virus","Middle East Respiratory Syndrome Coronavirus (MERS-CoV)","http://ecdc.europa.eu/en/healthtopics/coronavirus-infections/mers-factsheet/Pages/default.aspx#C5 http://www.cdc.gov/coronavirus/mers/guidelines-clinical-specimens.html","ECDC CDC","",""],
+["NA","Human","IV","MERS coronavirus","Virus","Middle eastern respiratory syndrome virus ","http://ecdc.europa.eu/en/healthtopics/coronavirus-infections/mers-factsheet/Pages/default.aspx http://www.who.int/csr/disease/coronavirus_infections/WHO_interim_recommendations_lab_detection_MERSCoV_092014.pdf","ECDC WHO","",""],
+["NA","Human ","IV","Measles","Virus","Morbillivirus","http://www.cdc.gov/measles/lab-tools/index.html","CDC","","Y"],
+["NA","Human ","IV","Mumps","Virus","Mumps virus (Rubulavirus)","http://ecdc.europa.eu/en/healthtopics/mumps/Pages/factsheet_professionals.aspx http://www.cdc.gov/mumps/lab/specimen-collect.html","ECDC CDC","","Y"],
+["Domestic","Aves","IV / PM","Avian tuberculosis","Bacterium","Mycobacterium avium ","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.03.06_AVIAN_TB.pdf","OIE","","N"],
+["Domestic","Multihost","IV / PM","Paratuberculosis; Johne's disease","Bacterium","Mycobacterium avium subsp. paratuberculosis","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.01.11_PARATB.pdf","OIE ","","Y"],
+["Free-ranging","Lagomorphs / rabbits","IV / PM","Paratuberculosis; Johne's disease","Bacterium","Mycobacterium avium subsp. paratuberculosis","Shaughnessy, Vet J, 2013, 198:267-270; www.ncbi.nlm.nih.gov/pubmed/24075203","pubmed","","Y"],
+["Free-ranging","Ruminants / deer / cervidae","IV / PM","Paratuberculosis; Johne's disease","Bacterium","Mycobacterium avium subsp. paratuberculosis","Carta, Res Vet Sci, 2013, 94:191-197; www.ncbi.nlm.nih.gov/pubmed/23261154; ","pubmed","","Y"],
+["Domestic","Bovinae","IV / PM","Bovine tuberculosis","Bacterium","Mycobacterium bovis","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.04.07_BOVINE_TB.pdf","OIE","","Y"],
+["Domestic / Free-ranging","Piscine","IV / PM","Fisk tank granuloma","Bacterium","Mycobacterium marinum","http://www.cfsph.iastate.edu/Factsheets/pdfs/mycobacterium_marinum.pdf","CSFPH","",""],
+["NA","Human ","IV","Tuberculosis","Bacterium","Mycobacterium spp.","http://www.cdc.gov/tb/topic/testing/default.htm","ECDC","","Y"],
+["Domestic","Multihost","IV / PM","Tuberculosis","Bacterium","Mycobacterium spp.","http://www.oie.int/doc/ged/D3021.PDF http://www.cfsph.iastate.edu/Factsheets/pdfs/bovine_tuberculosis.pdf","OIE CFSPH","",""],
+["Free-ranging","Multihost","IV / PM","Tuberculosis","Bacterium","Mycobacterium spp.","www.aphaea.eu/cards/species   (pending)","APHAEA","",""],
+["Domestic","Caprinae","IV / PM","Contagious agalactia","Bacterium","Mycoplasma agalactiae","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.07.05_CONT_AGALACT.pdf","OIE","","Y"],
+["Domestic","Caprinae","IV / PM","Contagious caprine pleuropneumonia","Bacterium","Mycoplasma capricolum subsp. capripneumoniae","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/CONTAGIOUS_CAPRINE_PLEURO.pdf","OIE","","Y"],
+["Free-ranging","Caprinae (Ibex)","IV","Contagious caprine pleuropneumonia","Bacterium","Mycoplasma capricolum subsp. Capripneumoniae","Giangaspero, J Wildl Dis, 2010, 46:1070-1078; www.ncbi.nlm.nih.gov/pubmed/20966258","pubmed (OiE, card present)","","Y"],
+["Free-ranging","Aves / birds (Fringillidae)","IV","Avian mycoplasmosis","Bacterium","Mycoplasma gallisepticum","Farmer, J Wildl Dis, 2005, 41(2), 317-325; www.ncbi.nlm.nih.gov/pubmed/16107666; Pennycott, Vet Rec, 2005, 156(16): 513-515; www.ncbi.nlm.nih.gov/pubmed/15833969","pubmed","","Y"],
+["Domestic","Aves","IV / PM","Avian mycoplasmosis","Bacterium","Mycoplasma gallisepticum; Mycoplasma synoviae","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.03.05_%20AVIAN_MYCO.pdf","OIE","","Y"],
+["Domestic","Bovinae","IV / PM","Contagious bovine pleuropneumonia","Bacterium","Mycoplasma mycoides�subsp.�mycoides","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/CONTAGIOUS_BOVINE_PLEUROPNEUMONIA.pdf","OIE","","Y"],
+["Domestic","Lagomorphs","IV / PM","Myxomatosis","Virus","Myxoma virus (pox virus)","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.06.01_MYXO.pdf","OIE","","Y"],
+["Free-ranging","Lagomorphs / rabbits","IV / PM","Myxomatosis","Virus","Myxoma virus, Leporipoxvirus","(not specific for wildlife:) www.oie.int/fileadmin/Home/fr/Health_standards/tahm/2.06.01_MYXO.pdf","OiE","","Y"],
+["NA","Human","IV","Arboviral compatible febrile diseases","Virus","NA","MERMAID protocol in preparation","PREPARE","",""],
+["NA","Human","IV","Acute Respiratory Infections in Adults","NA","NA","MERMAID protocol in preparation","PREPARE","",""],
+["NA","Human","IV","Sepsis-like Syndrome in Young Infants ","NA","NA","MERMAID protocol in preparation","PREPARE","",""],
+["NA","Human","IV","Viral respiratory disease","Virus","NA","http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3185851/","Pubmed","",""],
+["Domestic","Caprinae","IV / PM","Nairobi sheep disease","Virus","Nairobi sheep disease virus","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.09.01_BUNYAVIRAL_DISEASES.pdf","OIE","","Y"],
+["Free-ranging","Caprinae (no specific wildlife information available)","IV / PM","Nairobi sheep disease (Nairovirus)","Virus","Nairobi sheep disease virus","(oie information includes free-ranging animals:) www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.07.08_NAIROBI_SHEEP.pdf","OiE","","Y"],
+["NA","Human ","IV / PM","Crimean congo haemorrhagic fever","Virus","Nairovirus (Bunyavirus)","http://www.cdc.gov/vhf/crimean-congo/CCHF-FactSheet.pdf http://www.who.int/mediacentre/factsheets/fs208/en/ http://www.oie.int/fileadmin/Home/fr/Health_standards/tahm/2.01.03b_CCHF.pdf","CDC WHO OIE","",""],
+["NA","Human ","IV","Gonococcus","Bacterium","Neisseria gonorrhoeae","http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2095009/","Pubmed","","Y"],
+["NA","Human ","IV","Meningococcal disease","Bacterium","Neisseria meningitidis","http://www.cdc.gov/meningitis/lab-manual/index.html http://www.cdc.gov/meningococcal/about/diagnosis-treatment.html","ECDC","","Y"],
+["Free-ranging","Multihost","IV / PM","Neospora caninum","Parasite","Neospora caninum","www.aphaea.eu/cards/species   (pending)","APHAEA","",""],
+["Domestic","Aves","IV / PM","Newcastle disease","Virus","Newcastle disease virus","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/NEWCASTLE_DISEASE.pdf http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.03.14_NEWCASTLE_DIS.pdf","OIE","","Y"],
+["Free-ranging","Aves / birds (Anatidae / ducks mainly)","IV / PM","Newcastle disease","Virus","Newcastle disease virus (Avulavirus)","www.wildlifehealthaustralia.com.au/Portals/0/Documents/FactSheets/Newcastle%20Disease%2019%20Jul%202011%20%281.1%29.pdf; http://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=2120&context=icwdm_usdanwrc; Snoeck, Appl Environ Microbiol, 2013 (78:639-645); www.ncbi.nlm.nih.gov/pubmed/23160119 (preventing spread from wildlife:) myfwc.com/media/2958938/Wildlife-Rehabber-Guidelines-ND.pdf","AWHN, pubmed, other","","Y"],
+["Free-ranging","Multihost","IV / PM","Nipah and hendra diseases","Virus","Nipah and hendra virus (Paramyxovirus)","Middleton, 2007, J Comp Pathol 136:266-272; www.ncbi.nlm.nih.gov/pubmed/17498518; (not specific for wildlife:) www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.09.06_HENDRA_&_NIPAH_FINAL.pdf","pubmed, OiE","","Y"],
+["Domestic","Suidae","IV / PM","Nipah virus Encephalitis","Virus","Nipah virus (paramyxovirus)","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/NIPAH.pdf http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.09.06_NIPAH_HENDRA.pdf","OIE","","Y"],
+["Domestic","Multihost","IV / PM","Nipah and hendra diseases","Virus","Nipah virus; Hendra virus (paramyxovirus)","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.09.06_NIPAH_HENDRA.pdf","OIE","",""],
+["NA","Human ","IV","Norovirus infection; winter vomiting disease","Virus","Norovirus","http://www.cdc.gov/norovirus/hcp/diagnosis-treatment.html","CDC","",""],
+["Domestic","Caprinae","IV / PM","Contagious Ecythema; Sore Mouth","Virus","Orf virus (Poxvirus)","http://www.merckvetmanual.com/mvm/integumentary_system/contagious_ecthyma/overview_of_contagious_ecthyma.html","Merck","",""],
+["Domestic / Free-ranging","Mollusc","IV / PM","Ostreid herpesvirus 1 ","Virus","Ostreid herpesvirus 1","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.4.09_INF_OSTREID_HERPES.pdf","OIE","",""],
+["NA","Human ","IV","Erythema infectiosum; Fifth disease","Virus","Parvovirus B19","http://www.ncbi.nlm.nih.gov/pubmed/1403335","Pubmed","Limited sampling info available",""],
+["Domestic","Bovinae","IV / PM","Haemorrhagic septiceamia","Bacterium","Pasteurella multocida","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/HAEMORRHAGIC_SEPTICEMIA.pdf","OIE","","Y"],
+["Free-ranging","Aves / birds","IV / PM","Avian cholera; fowl cholera; avian pasteurellosis; avian hemorrhagic septicemia","Virus","Pasteurella multocida","www.nwhc.usgs.gov/publications/field_manual/chapter_7.pdf","USGS","",""],
+["Free-ranging","Multihost","IV / PM","Pasteurella multocida, Haemorrhagic septicaemia","Bacterium","Pasteurella multocida","www.aphaea.eu/cards/species   (pending)","APHAEA (OiE, card present)","",""],
+["Domestic","Suidae","IV / PM","Atrophic rhinitis","Bacterium","Pasteurella multocida and/or Bordetella bronchiseptica","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.08.02_ATROPHIC_RHINITIS.pdf","OIE","",""],
+["Domestic","Aves","IV / PM","Fowl Cholera","Bacterium","Pastuerella multocida","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.03.09_FOWL_CHOLERA.pdf","OIE","","N"],
+["Domestic / Free-ranging","Mollusc","IV / PM","Perkinsus marinus","Protist","Perkinsus marinus","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.4.05_P_MARINUS.pdf","OIE","","Y"],
+["Domestic / Free-ranging","Mollusc","IV / PM","Perkinsus olseni","Protist","Perkinsus olseni","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.4.06_P_OLSENI.pdf","OIE","","Y"],
+["Domestic","Caprinae","IV / PM","Peste des petits ruminants","Virus","Peste des petits ruminants virus (morbillivirus)","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/PESTE_DES_PETITS_RUMINANTS.pdf","OIE","","Y"],
+["Free-ranging","Capridae","IV / PM","Peste des petits ruminants","Virus","Peste des petits ruminants virus (Morbillivirus)","Munir, Transbound Emerg Dis, 201, 61:411-424; www.ncbi.nlm.nih.gov/pubmed/23305511; www.oie.int/doc/ged/D2865.PDF; (not specific for wildlife:) www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/PESTE_DES_PETITS_RUMINANTS.pdf","pumbed, OiE","not in Europe currently","Y"],
+["NA","Human ","IV","Malaria","Protozoan","Plasmodium spp.","http://ecdc.europa.eu/en/healthtopics/malaria/factsheet-health-professionals/Pages/factsheet_health_professionals.aspx http://www.cdc.gov/dpdx/malaria/dx.html","ECDC CDC","",""],
+["NA","Human ","IV","Poliomyelitis ","Virus","Polio virus","http://www.cdc.gov/polio/us/lab-testing/diagnostic.html","CDC","","Y"],
+["Domestic","Suidae","IV / PM","Porcine reproductive and respiratory syndrome","Virus","Porcine reproductive and respiratory syndrome virus (Arterivirus)","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.08.07_PRRS.pdf","OIE","","Y"],
+["Free-ranging","Suidae / wild boar","IV / PM","Porcine reproductive and respiratory syndrome","Virus","Porcine reproductive and respiratory syndrome virus (Arterivirus)","Reiner, Vet Microbiol, 2009, 136:250-258; www.ncbi.nlm.nih.gov/pubmed/19131188; Wu, Emerg Infect Dis, 2011, 17:1071-1073; www.ncbi.nlm.nih.gov/pubmed/21749773; Hammer, J Wildl Dis, 2012, 48:87-94; www.ncbi.nlm.nih.gov/pubmed/22247377","pubmed","","Y"],
+["Domestic","Suidae","IV / PM","Teschovirus encephalomyelitis; Teschen disease","Virus","Porcine teschovirus serotype 1","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.08.10_TESCHOVIRUS_ENCEPH.pdf","OIE","",""],
+["Domestic","Bovinae","PM","Bovine spongiform encephalopathy","Prion","Prion protein","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.04.06_BSE.pdf","OIE","","Y"],
+["Free-ranging","Ruminants / deer / cervidae","IV / PM","Chronic wasting disease","Prion","Prion protein","www.nwhc.usgs.gov/disease_information/chronic_wasting_disease/cwd_news.jsp; www.nwhc.usgs.gov/publications/fact_sheets/pdfs/cwd/CWD_Surveillance_Strategies.pdf","USGS","","Y"],
+["Domestic","Bovinae","IV / PM","Pseudocow pox; milkers nodules","Virus","Pseudocowpox virus (parapox)","","","",""],
+["NA","Human ","IV","Haemorrhagic fever with renal syndrome","Virus","Puumula virus","http://ecdc.europa.eu/en/healthtopics/hantavirus/factsheet-health-professionals/Pages/factsheet_health_professionals.aspx","ECDC","",""],
+["Domestic","Lagomorphs","IV / PM","Rabbit haemorrhagic disease","Virus","Rabbit haemorrhagic disease virus (calicivirus)","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/RHD.pdf","OIE","","Y"],
+["Free-ranging","Lagomorphs / rabbits","IV / PM","Rabbit haemorrhagic disease; viral haemorrhagic disease","Virus","Rabbit haemorrhagic disease virus (Calicivirus)","(not specific for wildlife:) www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.06.02_RHD.pdf","OiE","","Y"],
+["NA","Human ","IV","Rabies","Virus","Rabies (rhabdo) virus","http://www.cdc.gov/rabies/diagnosis/index.html http://www.who.int/mediacentre/factsheets/fs099/en/","CDC WHO","NB also PM info animals","Y"],
+["Domestic","Multihost","PM","Rabies","Virus","Rabies virus","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/RABIES_FINAL.pdf","OIE","","Y"],
+["Domestic","Multihost","PM","Rabies","Virus","Rabies virus (rhabdovirus)","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/RABIES_FINAL.pdf","OIE","",""],
+["Domestic / Free-ranging","Amphibian","IV / PM","Ranavirus","Virus","Ranavirus (iridovirus)","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.1.02_RANAVIRUS.pdf","OIE","","Y"],
+["Domestic / Free-ranging","Piscine","IV / PM","Red sea bream iridoviral disease","Virus","Red sea bream iridovirus","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.3.07_RSIVD.pdf","OIE","","Y"],
+["Domestic","Multihost","IV / PM","Rocky Mountain Spotted Fever","Bacterium","Rickettsia rickettsia","http://www.cfsph.iastate.edu/Factsheets/pdfs/RMSF.pdf","CFSPH","",""],
+["NA","Human ","IV","Rickettsiosis; Spotted fever","Bacterium","Rickettsia spp.","http://www.cdc.gov/rmsf/symptoms/index.html#diagnosis http://www.cdc.gov/rmsf/info/index.html","CDC","",""],
+["NA","Human ","IV","Rift valley fever","Virus","Rift valley fever virus","http://ecdc.europa.eu/en/healthtopics/rift_valley_fever/factsheet-health-professionals/Pages/factsheet-health-professionals.aspx http://www.cdc.gov/vhf/rvf/diagnosis/index.html","ECDC CDC","",""],
+["Domestic","Multihost","IV / PM","Rift Valley Fever","Virus","Rift valley Fever virus","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/RIFT_VALLEY_FEVER.pdf","OIE","","Y"],
+["Free-ranging","Ruminants","IV / PM","Rift Valley fever","Virus","Rift valley fever virus","Paweska, J Virol Methods, 2005, 127: 10-18; www.ncbi.nlm.nih.gov/pubmed/15893560; (not specific for wildlife:) www.oie.int/fileadmin/Home/fr/Health_standards/tahm/2.01.14_RVF.pdf","pubmed, OiE","","Y"],
+["Domestic","Multihost","IV / PM","Rinderpest virus","Virus","Rinderpest virus (morbillivirus)","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/RINDERPEST.pdf","OIE","","Y"],
+["Free-ranging","Ruminants","IV / PM","Rinderpest","Virus","Rinderpest virus (Morbillivirus)","www.oie.int/doc/ged/D2865.PDF; (not specific for wildlife:) www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/RINDERPEST.pdf","OiE","eradicated 2011","Y"],
+["NA","Human ","IV","Rubella","Virus","Rubella virus","http://www.cdc.gov/rubella/lab/index.html http://ecdc.europa.eu/en/healthtopics/rubella/factsheets/Pages/professionals.aspx","ECDC CDC","","Y"],
+["Domestic","Caprinae","IV / PM","Salmonellosis","Bacterium","Salmonella abortusovis","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.09.09_SALMONELLOSIS.pdf","OIE","","Y"],
+["NA","Human ","IV","Typhoid and paratyphoid fever","Bacterium","Salmonella enterica typhi and paratyphi","http://www.who.int/rpc/TFGuideWHO.pdf","WHO","",""],
+["Domestic","Aves","IV / PM","Pullorum disease","Bacterium","Salmonella pullorum","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.03.11_FOWL_TYPHOID.pdf","OIE","","Y"],
+["Domestic","Multihost","IV / PM","Samonellosis","Bacterium","Salmonella spp.","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.09.09_SALMONELLOSIS.pdf","OIE","",""],
+["Domestic","Aves","IV / PM","Fowl Typhoid","Bacterium","Salmonella spp.","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.03.11_FOWL_TYPHOID.pdf","OIE","","Y"],
+["Domestic","Reptiles ","IV / PM","Salmonellosis","Bacterium","Salmonella spp.","http://www.cfsph.iastate.edu/Factsheets/pdfs/reptile_associated_salmonellosis.pdf","CFSPH","",""],
+["Domestic","Multihost","IV / PM","Salmonellosis","Bacterium","Salmonella spp.","http://www.cfsph.iastate.edu/Factsheets/pdfs/nontyphoidal_salmonellosis.pdf http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.09.09_SALMONELLOSIS.pdf","CFSPH OIE","",""],
+["Free-ranging","Aves / birds","IV / PM","Fowl typhoid","Bacterium","Salmonella spp.","www.wildlifehealthaustralia.com.au/Portals/0/Documents/FactSheets/Salmonella%20DT160%204%20Dec%202013%20%282.2%29.pdf; www.nwhc.usgs.gov/publications/field_manual/chapter_9.pdf","AWHN, USGS","","Y"],
+["Free-ranging","Aves / birds (Anatidae / ducks mainly)","IV / PM","Salmonellosis","Bacterium","Salmonella spp.","www.aphaea.eu/cards/species   (pending); www.nwhc.usgs.gov/publications/field_manual/chapter_9.pdf","APHAEA","",""],
+["NA","Human ","IV","Salmonellosis","Bacterium","Salmonella spp.  (non-typhi, non-paratyphi)","http://www.cdc.gov/salmonella/general/diagnosis.html http://www.ncbi.nlm.nih.gov/books/NBK8435/","CDC PubMed","","Y"],
+["Domestic / Free-ranging","Piscine","IV / PM","Salmonid alphavirus","Virus","Salmonid alphavirus (Togavirus)","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.3.05b_SAV.pdf","OIE","","Y"],
+["Domestic","Equidae","IV","Horse mange","Parasite","Sarcoptes scabei","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.09.08_MANGE.pdf","OIE","",""],
+["Domestic","Multihost","IV / PM","Mange","Parasite","Sarcoptes scabei","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.09.08_MANGE.pdf","OIE","",""],
+["Domestic","Multihost","IV","Mange","Parasite","Sarcoptes scabeii","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.09.08_MANGE.pdf","OIE","",""],
+["NA","Ruminants","IV","Schmallenberg virus","Virus","Schmallenberg virus (orthobunyavirus)","http://ecdc.europa.eu/en/healthtopics/schmallenberg-virus/Pages/index.aspx","ECDC","no zoonotic threat",""],
+["Domestic","Caprinae","PM","Scrapie","Prion","Scrapie prion protein","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.07.13_SCRAPIE.pdf","OIE","","Y"],
+["NA","Human ","IV","SARS","Virus","Severe acute respiratory syndrome coronavirus","http://www.cdc.gov/sars/clinical/index.html http://www.who.int/csr/sars/guidelines/en/","CDC","","Y"],
+["Domestic","Caprinae","IV / PM","Sheep pox; Goat pox","Virus","Sheep pox; goat pox virus (capripox virus)","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/SHEEP_GOAT_POX.pdf http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.07.14_S_POX_G_POX.pdf","OIE ","","Y"],
+["NA","Human ","IV","Shigellosis","Bacterium","Shigella spp.","http://www.ncbi.nlm.nih.gov/books/NBK8038/","PubMed","","Y"],
+["NA","Human ","IV","Sindbis fever","Virus","Sinbis virus (alphavirus)","http://ecdc.europa.eu/en/healthtopics/sindbis_fever/factsheet-health-professionals/Pages/factsheet-for-health-professionals.aspx","ECDC","",""],
+["Free-ranging","Caprinae","IV / PM","Maedi-visna; ovine progressive pneumonia; small ruminant lentiviruses (SRLVs)","Virus","small ruminant lentiviruses (Lentivirus)","Minardi da Cruz, Viruses, 2013, 23, 1867-1884; www.ncbi.nlm.nih.gov/pubmed/23881276; Erhouma, J Gen Viro, 2008, 89:1478-1484; www.ncbi.nlm.nih.gov/pubmed/18474564","pubmed","","Y"],
+["Domestic","Multihost","IV / PM","Sporotrichosis","Fungus","Sporothrix schenckii","http://www.cfsph.iastate.edu/Factsheets/pdfs/sporotrichosis.pdf","CFSPH","",""],
+["Domestic / Free-ranging","Piscine","IV / PM","Spring viraemia of carp","Virus","Spring viraemia of carp virus (Rhabdovirus)","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.3.08_SVC.pdf","OIE","","Y"],
+["NA","Human","IV","Staphyloccocal enterotoxin B","Bacterium","Staphylococcus aureus","http://www.asm.org/images/PSAB/StaphEntero_July2013.pdf","ASM","",""],
+["Domestic","Rodents","IV / PM","Rat bite fever","Bacterium","Streptobacillus moniliformis","http://www.cfsph.iastate.edu/Factsheets/pdfs/rat_bite_fever.pdf","CFSPH","",""],
+["NA","Human ","IV","Scarlet fever ","Bacterium","Streptococcus group A spp.","https://www.nlm.nih.gov/medlineplus/ency/article/000974.htm http://www.cdc.gov/streplab/index.html","NIH CDC","",""],
+["NA","Human ","IV","Streptococcal pharyngitis; Strep throat ","Bacterium","Streptococcus group A spp.","http://www.ncbi.nlm.nih.gov/pubmed/19275067       http://www.cdc.gov/streplab/index.html","CDC PubMed","",""],
+["NA","Human ","IV","Pneumococcal disease","Bacterium","Streptococcus pneumoniae","http://ecdc.europa.eu/en/healthtopics/pneumococcal_infection/Pages/factsheet-health-professionals.aspx http://www.cdc.gov/pneumococcal/clinicians/diagnosis-medical-mgmt.html","ECDC CDC ","","Y"],
+["NA","Human ","IV","Impetigo","Bacterium","Streptococcus spp.","http://www.ncbi.nlm.nih.gov/pubmed/17390597","PubMed","",""],
+["NA","Human ","IV","Streptococcus suis","Bacterium","Streptococcus suis","http://ecdc.europa.eu/en/healthtopics/streptococcus_suis/Pages/factsheet-health-professionals.aspx","ECDC","",""],
+["NA","Human ","IV","SARS coronavirus","Virus","Sudden acute respiratory syndrome virus","http://www.who.int/csr/sars/diagnostictests/en/ http://www.cdc.gov/sars/guidance/f-lab/app4.html","WHO CDC","",""],
+["Domestic","Multihost","IV / PM","Aujeszky's disease","Virus","Suid Herpesvirus 1","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.01.02_AUJESZKYS_DIS.pdf","OIE","","Y"],
+["Free-ranging","Multihost","IV / PM","Aujezky's disease; pseudorabies","Virus","Suid herpesvirus 1","www.aphaea.eu/cards/species   (pending)","APHAEA","",""],
+["Free-ranging","Suidae / wild boar","IV / PM","Swine Influenza","Virus","Swine influenza virus","Vittecoq, Infect Genet Evol, 2012, 12:483-486; www.ncbi.nlm.nih.gov/pubmed/22197763; Foni, Influenza Other Respir Viruses, 2013, suppl4:16-20; www.ncbi.nlm.nih.gov/pubmed/24224815; Vicente, J Wildl Dis, 2002, 38:649-652; www.ncbi.nlm.nih.gov/pubmed/12238391; Roic, J Wildl Dis, 2012, 48:131-137; www.ncbi.nlm.nih.gov/pubmed/22247381 (not specific for wild boar:) www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.08.08_SWINE_INFLUENZA.pdf","pubmed, OiE","","Y"],
+["Domestic","Suidae","IV / PM","Swine vesicular disease","Virus","Swine vesicular disease virus (Picornavirus)","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/SWINE_VESICULAR_DISEASE.pdf","OIE","",""],
+["Free-ranging","Suidae / wild boar","IV / PM","Swine vesicular disease","Virus","Swine vesicular disease virus (Picornavirus)","(Appendix A, Table 13 in:) www.efsa.europa.eu/sites/default/files/scientific_output/files/main_documents/2631.pdf; (not specific for wild boar:) www.oie.int/fileadmin/Home/fr/Health_standards/tahm/2.08.09_SVD.pdf","EFSA. OiE","","Y"],
+["Domestic","Bovinae","IV / PM","Bovine cyticercosis","Parasite","Taenia saginata","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.09.05_CYSTICERCOSIS.pdf","OIE ","",""],
+["Domestic","Suidae","IV / PM","Porcine cysticercosis","Parasite","Taenia solium","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.09.05_CYSTICERCOSIS.pdf","OIE","","Y"],
+["Free-ranging","Suidae / wild boar (not specific for wildlife)","IV / PM","Porcine cysticercosis","Parasite","Taenia solium","(no specific info for wildlife:) www.oie.int/fileadmin/Home/eng/Health_standards/tahc/2010/chapitre_taenia_solium.pdf","OiE","","Y"],
+["Domestic","Multihost","IV / PM","Cysticercosis","Parasite","Taenia spp.","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.09.05_CYSTICERCOSIS.pdf","OIE","",""],
+["Domestic","Multihost","IV / PM","Cysticercosis","Parasite","Taenia spp.","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.09.05_CYSTICERCOSIS.pdf http://www.cfsph.iastate.edu/Factsheets/pdfs/taenia.pdf","OIE","",""],
+["Domestic / Free-ranging","Crustacean","IV / PM","Taura syndrome","Virus","Taura syndrome virus","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.2.05_TAURA.pdf","OIE","","Y"],
+["Domestic","Equidae","IV / PM","Contagious equine metritis","Bacterium","Taylorella equigenitalis","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.05.02_CEM.pdf","OIE","","Y"],
+["Free-ranging","Equidae (not specific for wildlife)","IV / PM","Contagious equine metritis","Bacterium","Taylorella equigenitalis","(not specific for wildlife:) www.oie.int/fileadmin/Home/fr/Health_standards/tahm/2.05.02_CEM.pdf","OiE","","Y"],
+["Domestic","Bovinae","IV / PM","Theileriosis","Protozoan","Theileria spp.","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/THEILERIOSIS.pdf","OIE ","","Y"],
+["Free-ranging","Multihost","IV / PM","Theileriosis","Parasite","Theileria spp.","Zanet, Parasit Vectors, 2014, Feb17l 7:70; www.ncbi.nlm.nih.gov/pubmed/24533742; Mans, Int J Parasitol Parasites Wildl, 2015, 4:104-118; www.ncbi.nlm.nih.gov/pubmed/25830110; www.fao.org/wairdocs/ilri/x5549e/x5549e0w.htm; ","pubed","","Y"],
+["Free-ranging","Multihost","IV / PM","Tick borne encephalitis","Virus","Tick borne encephalitis virus","www.aphaea.eu/cards/species   (pending)","APHAEA","",""],
+["NA","Human ","IV","Tick-borne encephalitis (TBE)","Virus","Tick-borne encephalitis virus (Flavivirus)","http://ecdc.europa.eu/en/healthtopics/emerging_and_vector-borne_diseases/tick_borne_diseases/tick_borne_encephalitis/basic_facts/Pages/factsheet-health-professionals.aspx http://www.cdc.gov/vhf/tbe/diagnosis/index.html","ECDC CDC","",""],
+["Domestic","Carnivores","IV / PM","Roundworm; toxocariasis","Parasite","Toxocara spp.","http://www.cfsph.iastate.edu/Factsheets/pdfs/toxocariasis.pdf","CFSPH","",""],
+["NA","Human ","IV","Toxoplasmosis","Protozoan","Toxoplasma gondii","http://www.cdc.gov/dpdx/toxoplasmosis/dx.html","CDC","","Y"],
+["Domestic","Multihost","IV / PM","Toxoplasmosis","Protozoan","Toxoplasma gondii","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.09.10_TOXO.pdf","OIE","",""],
+["Domestic","Multihost","IV / PM","Toxoplasmosis","Protozoan","Toxoplasma gondii","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.09.10_TOXO.pdf","OIE","",""],
+["Free-ranging","Multihost","IV / PM","Toxoplasmosis","Parasite","Toxoplasma gondii","www.aphaea.eu/cards/species   (pending)","APHAEA","",""],
+["Domestic","Suidae","IV / PM","Transmissible gastroenteritis","Virus","Transmissible gastroenteritisvirus (coronavirus)","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.08.11_TRANSMISSIBLE_GASTRO.pdf","OIE","","Y"],
+["Free-ranging","Suidae / wild boar","IV / PM","Transmissible gastroenteritis","Virus","Transmissible gastroenteritisvirus (Coronavirus)","Sedlak, J Wildl Dis, 2008; 44:777-780; www.ncbi.nlm.nih.gov/pubmed/18689671; Woods, J Wildl Dis, 1990, 26:420-422; www.ncbi.nlm.nih.gov/pubmed/2167395; Roic, J Wildl Dis, 2012, 48:131-137; www.ncbi.nlm.nih.gov/pubmed/22247381; (not specific for wild boar:) www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.08.11_TRANSMISSIBLE_GASTRO.pdf","pumbed, OiE","","Y"],
+["NA","Human ","PM","Variant Creutzfeld-Jacobs disease","Prion","Transmissible spongiform encephalopathy","http://www.cdc.gov/prions/vcjd/diagnostic-criteria.html http://ecdc.europa.eu/en/healthtopics/Variant_Creutzfeldt-Jakob_disease(vCJD)/Pages/factsheet_health_professionals.aspx","ECDC CDC","Definitive diagnosis only post-mortem","Y"],
+["NA","Human ","IV","Syphilis","Bacterium","Treponema pallidum","http://www.cdc.gov/std/syphilis/stdfact-syphilis-detailed.htm","CDC","","Y"],
+["NA","Human ","IV","Trichinosis; Trichinellosis","Parasite","Trichinella spp","http://www.cdc.gov/parasites/trichinellosis/health_professionals/index.html#dx","ECDC","","Y"],
+["Domestic","Multihost","PM","Trichinellosis","Parasite","Trichinella spp.","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.01.16_TRICHINELLOSIS.pdf","OIE","","Y"],
+["Free-ranging","Multihost","IV / PM","Trichinellosis","Parasite","trichinella spp.","www.aphaea.eu/cards/species   (pending)","APHAEA","",""],
+["Domestic","Bovinae","IV / PM","Trichomonosis","Protozoan","Trichomonas fetus","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.04.17_TRICHOMONOSIS.pdf","OIE","","Y"],
+["Domestic","Multihost","IV","Ringworm; Tinea; Dermatophytosis","Fungus","Trichophyton, microsporum etc","http://www.cdc.gov/fungal/diseases/ringworm/health-professionals.html http://www.merckvetmanual.com/mvm/integumentary_system/dermatophytosis/overview_of_dermatophytosis.html http://www.cfsph.iastate.edu/Factsheets/pdfs/dermatophytosis.pdf","CDC Merck CFSPH","",""],
+["Domestic","Equidae","IV / PM","Dourine","Protozoan","Trypanosoma equiperdum","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/DOURINE.pdf http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.05.03_DOURINE.pdf","OIE","","Y"],
+["Free-ranging","Equidae (not specific for wildlife)","IV / PM","Dourine","Protozoa","Trypanosoma equiperdum","(not specific for wildlife:) www.oie.int/fileadmin/Home/fr/Health_standards/tahm/2.05.03_DOURINE.pdf","OiE","","Y"],
+["Domestic","Multihost","IV / PM","Surra","Protozoan","Trypanosoma evansi","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/TRYPANO_EVANSI.pdf","OIE","","Y"],
+["Domestic","Bovinae","IV / PM","Trypanosomosis (tsetse transmitted)","Protozoan","Trypanosoma spp.","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/TRYPANO_TSETSE.pdf","OIE","","Y"],
+["Free-ranging","Aves / birds (Anatidae / ducks mainly)","IV / PM","Trypanosomosis","Protozoa","Trypanosoma spp.","Merino, J Wildl Dis, 1997, 33:638-641; http://www.ncbi.nlm.nih.gov/pubmed/9249714","pubmed","",""],
+["Free-ranging","Multihost","IV / PM","Trypanosomosis","Protozoa","Trypanosoma spp.","Anderson, Plos Negl Trop Dis, 2011, 5 e1211; www.ncbi.nlm.nih.gov/pubmed/21713019; Ideozu, Parasit Vectors, 2015, 8:480; www.ncbi.nlm.nih.gov/pubmed/26396074","pubmed","",""],
+["Free-ranging","Aves / birds (Anatidae / ducks mainly)","IV / PM","Usutu","Virus","Usutu virus","Ziegler, Vector Borne Zoonotic Dis, 2015, 15:481-488; www.ncbi.nlm.nih.gov/pubmed/26273809","pubmed","",""],
+["NA","Human ","IV","Chickenpox","Virus","Varicella-zoster virus","http://www.cdc.gov/chickenpox/lab-testing/collecting-specimens.html","ECDC","",""],
+["NA","Human ","IV","Smallpox","Virus","Variola major virus and variola minor virus","http://emergency.cdc.gov/agent/smallpox/lab-testing/ http://www.asm.org/images/PSAB/Smallpox_July2013.pdf","ECDC ASM","","Y"],
+["Domestic","Equidae","IV / PM","Venezuelan equine encephalomyelitis","Virus","Venezuelan equine encephalomyelitis","http://www.oie.int/fileadmin/Home/eng/Animal_Health_in_the_World/docs/pdf/Disease_cards/VEE.pdf http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.05.13_VEE.pdf","OIE","","Y"],
+["Domestic","Multihost","IV / PM","VTEC","Bacterium","Verotoxigenic Escherichia Coli","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.09.11_VERO_E_COLI.pdf","OIE ","",""],
+["Free-ranging","Multihost","IV / PM","Vesicular stomatitis","Virus","Vesicular stomatitis virus","(reference includes information free-ranging species:) www.efsa.europa.eu/sites/default/files/scientific_output/files/main_documents/2631.pdf; www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.01.19_VESICULAR_STOMITIS.pdf","OiE","","Y"],
+["NA","Human ","IV","Cholera","Bacterium","Vibrio cholerae","http://www.cdc.gov/cholera/diagnosis.html http://www.cdc.gov/cholera/pdf/GDD_Manual_Cholera_chapters_2012_1_11-508c.pdf","CDC","","Y"],
+["Domestic / Free-ranging","Piscine","IV / PM","Viral haemorrhagic septicaemia","Virus","Viral haemorrhagic septicaemia virus (Rhabdovirus)","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.3.09_VHS.pdf","OIE","","Y"],
+["NA","Human ","IV","West Nile fever","Virus","West Nile virus","http://www.cdc.gov/westnile/healthcareproviders/healthcareproviders-diagnostic.html http://ecdc.europa.eu/en/healthtopics/west_nile_fever/factsheet-for-health-professionals/Pages/factsheet_health_professionals.aspx","ECDC CDC","",""],
+["Domestic","Multihost","IV / PM","West Nile fever","Virus","West Nile Virus","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.01.20_WEST_NILE.pdf","OIE","","Y"],
+["Free-ranging","Multihost","IV / PM","West nile virus","Virus","West nile virus","www.aphaea.eu/cards/species   (pending)","APHAEA","",""],
+["Domestic","Equidae","IV / PM","Western equine encephalomyelitis","Virus","Western equine encephalomyelitis virus","http://www.oie.int/fileadmin/Home/eng/Health_standards/tahm/2.05.05_EQUINE_ENCEPH.pdf","OIE","","Y"],
+["Domestic / Free-ranging","Crustacean","IV / PM","White spot disease","Virus","White spot syndrome virus (nimavirus)","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.2.06_WSD.pdf","OIE","","Y"],
+["Domestic / Free-ranging","Mollusc","IV / PM","Xenohaliotis californiensis","Bacterium","Xenohaliotis californiensis","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.4.07_X_CALIF.pdf","OIE","","Y"],
+["Domestic / Free-ranging","Crustacean","IV / PM","Yellowhead virus","Virus","Yellow head virus genotype 1","http://www.oie.int/fileadmin/Home/eng/Health_standards/aahm/current/2.2.08_YHD.pdf","OIE","","Y"],
+["NA","Human ","IV","Yersiniosis","Bacterium","Yersinia enterocolitica and pseudotuberculosis","http://www.cdc.gov/nczved/divisions/dfbmd/diseases/yersinia/#diagnosis","ECDC","","Y"],
+["NA","Human ","IV","Plague","Bacterium","Yersinia pestis","http://ecdc.europa.eu/en/healthtopics/plague/basic_facts/Pages/Factsheet_health_professionals.aspx http://www.cdc.gov/plague/healthcare/clinicians.html http://www.asm.org/images/PSAB/LRN/Ypestis%20Sept2015.pdf","ECDC CDC ASM","",""],
+["Domestic","Multihost","IV / PM","Plague; Black death; Bubonic plague","Bacterium","Yersinia pestis","http://www.cfsph.iastate.edu/Factsheets/pdfs/plague.pdf","CFSPH","",""],
+["NA","Human ","IV","Zika virus infection","Virus","Zika virus (Flavivirus)","http://ecdc.europa.eu/en/healthtopics/zika_virus_infection/factsheet-health-professionals/Pages/factsheet_health_professionals.aspx http://www.cdc.gov/zika/hc-providers/diagnostic.html","ECDC CDC","",""]
+			];
+		$(document).ready(function() {
+			$('#example').DataTable( {
+				data: dataSet,
+				columns: [
+					{ title: "Domestic / Free-ranging / Not Applicable (NA)","defaultContent": "" },
+					{ title: "Host species","defaultContent": "" },
+					{ title: "In-vivo (IV) / Post-mortem (PM)","defaultContent": "" },
+					{ title: "Disease or Syndrome","defaultContent": "" },
+					{ title: "Pathogen type","defaultContent": "" },
+					{ title: "Pathogen species","defaultContent": "" },
+					{ title: "Protocol(s)","defaultContent": "" },
+					{ title: "Source","defaultContent": "" },
+					{ title: "Comments","defaultContent": "" },
+					{ title: "Notifiable","defaultContent": "" }
+				]
+			} );
+		} );
+	</script>
+</body>
+</html>
