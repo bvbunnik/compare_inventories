@@ -1,0 +1,207 @@
+<!-- DOCTYPE -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>COMPARE INVENTORIES DATABASE</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+  <link rel="stylesheet" media="screen" href="assets/fonts/font-awesome/font-awesome.min.css">
+  <link rel="stylesheet" media="screen" href="assets/fonts/simple-line-icons.css">
+  <link rel="stylesheet" media="screen" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/colors/green.css" media="screen" />
+  <script type="text/javascript" src="assets/js/jquery-min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/js/main.js"></script>
+  <script type="text/javascript" src="assets/js/datatables.js"></script>
+  <script type="text/javascript" src="assets/js/dataTables.bootstrap4.min.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <header id="header-wrap">
+      <section id="header">
+        <nav class="navbar navbar-light" data-spy="affix" data-offset-top="50">
+          <button class='navbar-toggler hidden-md-up pull-xs-right' data-target='#main-menu' data-toggle='collapse' type='button'> ? </button>
+          <a class="navbar-brand" href="index.html">
+              <img src="assets/img/Logo_Compare_Small.png" alt="Compare Logo" style="width: 200px;">
+            </a>
+          <div class="collapse navbar-toggleable-sm" id="main-menu">
+            <ul class="nav nav-inline">
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="index.html" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="frameworks.html" role="button" aria-haspopup="true" aria-expanded="false">
+                    Model Frameworks
+                  </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item active" href="frameworks.html">Open-source Frameworks</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="pipelines.html" role="button" aria-haspopup="true" aria-expanded="false">
+                    Metagenomics Pipelines
+                  </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="pipelines.html">Metagenomics Pipelines</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown pull-md-right">
+                <a class="nav-link open-search" href="#" role="button" aria-haspopup="true" aria-expanded="false"><span class="top_search_icon"><i class="icon-magnifier"></i></span></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </section>
+    </header>
+
+    <section id="service-block-main" class="split section">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Inventory of modelling frameworks</h1>
+          <table id="example" class="table table-striped table-responsive">
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script type="text/javascript" charset="utf8">
+    var dataSet = [
+      ["FRED (Framework for Reconstructing Epidemiological Dynamics)", "http://fred.publichealth.pitt.edu/",
+        "FRED supports research on the dynamics of infectious disease epidemics and the interacting effects of: mitigation strategies, viral evolution, and personal health behaviour. The system uses agent-based modelling based on census-based synthetic populations that capture the demographic and geographic distributions of the population, as well as detailed household, school, and workplace social networks. Multiple circulating and evolving strains can be simulated. Mitigation strategies in the framework include vaccination, anti-viral drugs, and school closure policies. FRED supports models of health behaviour change to facilitate the study of critical personal health behaviours such as vaccine acceptance, personal hygiene and spontaneous social distancing. FRED is available through open source in the hopes of making large-scale agent-based epidemic models more useful to the policy-making community, the research community, and as a teaching tool for students in public health.",
+        "C++", "Agent-based model", "Policy-making community, the research community, and as a teaching tool for students in public health",
+        "Synthetic population data if the model is  used for country (countries) outside the USA. Disease specific parameters.",
+        "Incidence, Susceptible, Exposed, Infectious Symptomatic, Immune and  Recovered Agents, Number of schools closed,  Disease ID, Attack rate and Reproductive rate", "census based synthetic populations for USA included"
+      ],
+      ["STEM Project (Spatiotemporal Epidemiological Modeller)", "http://www.eclipse.org/stem/index.php",
+        " STEM is designed to make it easy for developers and researchers to plug in their choice of models. It comes with a large number of existing compartment models and a new model building framework that allows users to rapidly extend existing models or to create entirely new models. The model building framework provides a simple graphical users interface and automatically generates all of the model code and hot injects the code into STEM at runtime. In many cases, no knowledge of Eclipse or Java is required. The STEM code generator even allows users to build models affected by changes in climate data.",
+        "Java", "Compartmental model building  framework", "Model building framework.", "Dependent on the model that is implemented in STEM. Can range from simple parameter estimates and initial values to transport networks and spatial maps.",
+        "Dependent on the model that is implemented in STEM. Can range from simple output of (fraction of) infected / recovered to animated time series of spatial maps with the selected information.", "Comes with large number of existing models."
+      ],
+      ["EpiFire", "https://github.com/tjhladish/EpiFire/wiki", "EpiFire is a fast C++ applications programming interface for simulating the spread of epidemics on contact networks", "C++", "Contact network model", "",
+        "Description of the network (although a network can be generated). Transmission rate, number of index cases, infectious period.", "Node status in time, epidemic curves, epidemic size, expected R_0. Basic network analysis.", ""
+      ],
+      ["Generic Ebola Response (ER) : modelling the spread of disease impact & intervention.", "http://stacks.cdc.gov/view/cdc/24900",
+        "Spreadsheet-based model that (1) allows user to estimate the number of Ebola Virus Disease (EVD) cases in a community, (2) tracks patients susceptibility to disease through infectivity, incubation, recovery, and death, and (3) calculates the spread of EVD and its impact for 300 days. The timeline of 300 days is longer than most of the previously recorded outbreaks of EVD or Marburg Virus Disease.",
+        "Microsoft Excel", " Susceptible, Incubation, Infectious, Recovery (SIIR) Model", "Ebola outbreak modelling", "Population size, number of index cases, Infectious period, Incubation distribution",
+        "Daily clinical cases, Daily hospital admission, Daily beds-in-use, Cumulative Ebola cases", "Ebola specific"
+      ],
+      ["Global epidemic and mobility model (GLEAM)", "http://www.gleamviz.org/",
+        "The global epidemic and mobility model, GLEAM, combines real-world data on populations and human mobility with elaborate stochastic models of disease transmission to deliver analytic and forecasting power to address the challenges faced in developing intervention strategies that minimize the impact of potentially devastating epidemics.",
+        "Java", "stochastic transmission model, grid based model", "Pandemic modelling", "Disease specific parameter values", "Maps showing spread of infection in time, influence of airport networks",
+        "Many datasets build-in (i.e. population, airports, flight patterns, commuting networks, etc.)"
+      ],
+      ["Zika modelling", "http://www.zika-model.org/index.html", "Data-driven global stochastic and spatial vector-host epidemic model to provide a quantitative analysis of the spreading pattern of ZIKV in Latin America.", "GLEAM (Java)",
+        "stochastic , vector-host epidemic model", "ZIKV outbreak modelling", "See GLEAM", "See GLEAM", "Zika Virus specific."
+      ],
+      ["Epi Info", "https://www.cdc.gov/epiinfo/index.html",
+        "Epi Info� is a public domain suite of interoperable software tools designed for the global community of public health practitioners and researchers. It provides for easy data entry form and database construction, a customized data entry experience, and data analyses with epidemiologic statistics, maps, and graphs for public health professionals who may lack an information technology background. Epi Info� is used for outbreak investigations; for developing small to mid-sized disease surveillance systems; as analysis, visualization, and reporting (AVR) components of larger systems; and in the continuing education in the science of epidemiology and public health analytic methods at schools of public health around the world.",
+        "Unknown (Source not available?)", "statistical modelling, outbreak investigation", "Data entry, epidemiological statistics", "Surveillance data", "Statistical reports, maps & graphs for public health professionals", ""
+      ],
+      ["FlexDx Xpert Scale Up", "https://github.com/JJPennington/FlexDx-Xpert-Scale-Up",
+        "FlexDx is a tool that allows non-expert users to define their local situation according to four key parameters: TB incidence, proportion of new TB cases that are multidrug-resistant (MDR), adult human immunodeficiency virus (HIV) prevalence, and per-patient cost of first-line therapy. This tool then links a decision analysis describing nine different TB diagnostic strategies to a transmission model that provides five-year estimates of TB incidence, mortality, and control costs in any user-specified scenario.",
+        "Python", "Compartmental model specific for tuberculosis", "TB outbreak modelling", "See accompanying publications for full description and data requirements: https://elifesciences.org/content/3/e02565",
+        "See accompanying publications for full description and possible outputs: https://elifesciences.org/content/3/e02565", "Tuberculosis specific"
+      ],
+      ["InfluSim", "https://sourceforge.net/projects/influsim/",
+        "A deterministic pandemic influenza simulator. Computes the effect of interventions like antiviral treatment of cases and social distancing. To be used for pandemic preparedness planning by health care offices.", "Java",
+        "Deterministic pandemic influenza model", "Influenza modelling",
+        "Age distributions, contact matrix, children contacts, Hospital parameters, Disease parameters (Infectious periods, Severity, Case fatality), Treatments resources, Social distancing parameters", "Infection dynamics, Costs, Resource use.",
+        "Influenza specific"
+      ],
+      ["Sispread (Simulation of Infectious Spreading)", "http://sispread.sourceforge.net/",
+        "Sispread allows to simulate the dynamics of an hypothetic infectious disease within a contact network of connected people. It is intended to help people concerned by public health to easily perform epidemic simulations and to analyse their results.",
+        "c/c++", "Contact network model", "public health", "Type of model (SI, SIS, SIR), transmission rate, recovery rate, index cases", "Network files, outbreak data files", "only generated networks possible"
+      ],
+      ["EpiModel", "http://www.epimodel.org/",
+        "EpiModel is an R package that provides tools for simulating and analysing mathematical models of infectious disease. Supported epidemic model classes include deterministic compartmental models, stochastic individual contact models, and stochastic network models. Disease types include SI, SIR, and SIS epidemics with and without demography, with utilities available for expansion to construct and simulate epidemic models of arbitrary complexity. The network model class is based on the statistical framework of temporal exponential random graph models (ERGMs) implemented in the Statnet suite of software for R.",
+        "R", "Deterministic compartmental models, stochastic individual contact models, stochastic network models", "", "Parameters specific for used model class, initial conditions",
+        "Simulation data. I.e. compartment values and flow sizes for each simulation", ""
+      ],
+      ["Vimes", "http://github.com/thibautjombart/vimes", "Visualisation and Monitoring of Epidemics, including some outbreak detection algorithms.", "R", "Visualisation and monitoring tool",
+        "Match cases  based on different data types (i.e. location, time of onset, genetic sequences)", "Different sources of data that should be matched.", "Clusters of similar cases (graphs)", ""
+      ],
+      ["Outbreaker2", "http://github.com/thibautjombart/outbreaker2", "Inferring transmission chains by integrating epidemiological and genetic data.", "R", "Tool to integrate epidemiological and genetic data to infer transmission chains", "",
+        "Minimum: DNA-sequences (in DNAbin format), collection dates and generation time distribution. Optional: case distance matrix",
+        "transmission tree (who infected whom); dates of infection; mutation rate per generation of infection; proportion of the outbreak sampled; effective reproduction numbers over time or at an individual level; incidence curves; mutation rate per unit of time.",
+        ""
+      ],
+      ["EpiEstim", "http://github.com/annecori/EpiEstim", "Quantifying transmissibility throughout an epidemic from incidence time series.", "R", "Estimate key parameters from incidence time series", "", "Incidence data", "reproduction number R",
+        ""
+      ],
+      ["Incidence", "http://github.com/reconhub/incidence", "Computation, handling, visualisation and simple modelling of incidence.", "R", "Incidence modelling", "", "Incidence data", "Various showing incidence data, results of model fitting", ""],
+      ["Surveillance project", "http://surveillance.r-forge.r-project.org/",
+        "To provide open source software for the temporal and spatio-temporal visualization, modelling and monitoring of epidemic phenomena. This includes count, binary and categorical data time series as well as continuous-time processes having discrete or continuous spatial resolution.",
+        "R", "Models for epidemic phenomena", "", "Surveillance data", "Various options for visualisation, likelihood inference and simulation", ""
+      ],
+      ["Generic Disease Modelling System", "http://www.globalburden.org, https://github.com/aflaxman/gbd",
+        "This is the soon-to-be-finalized version of DisMod III, the Generic Disease Modelling System. It was developed for the Institute of Health Metrics and Evaluation at the University of Washington, as be part of the Global Burden of Disease 2010 Study.",
+        "Python", "descriptive epidemiological meta-regression tool", "",
+        "Prevalence data, including: Region, Country, GBD Cause , Year Start, Year End, Parameter : one of 'Prevalence', 'Incidence', 'Remission', 'Mortality', 'RR' (relative risk), 'SMR' (standardized mortality ratio), 'With Condition Mortality', 'Duration', 'cause-specific mortality', or 'Excess mortality', Age, Sex",
+        "Various measures of burden of disease", "Package still under development. Documentation is sparse"
+      ],
+      ["GLOBAL EPIDEMIC MODEL (GEM)", "http://www.epimodels.org/drupal/?q=node/12",
+        "The Global Epidemic Model (GEM) uses airline travel data and population data from 2000 to create a realistic air travel network among the major metropolitan areas of the world. The purpose of GEM is to model the time course of a possible epidemic as it spreads across the globe from an initial small outbreak in one city. GEM also allows for testing of various disease intervention strategies.�",
+        "Java", "pandemic models", "", "Disease specific parameter values (infectious period, contact rate, etc.)", "Simulation data. Interactive views of worldwide spread of the modelled disease", "Does not seem to be actively developed anymore"
+      ],
+      ["Transtat", "http://www.epimodels.org/drupal/?q=node/14",
+        "The key to controlling a pandemic is early detection, containment, and mitigation. The�TranStat�tool was developed to enable field personnel and researchers to enter and revise data from local outbreaks. From these data TranStat provides a means of testing for the presence of human-to-human (or animal-to-animal) transmission. If this transmission is detected, estimates of the household-specific and neighbourhood-specific secondary attack rates and local reproductive number are provided.",
+        "Java", "Resampling-based tests to detect person-to-person transmission of infectious disease", "", "Data on symptom onsets and cluster (i.e. household) information",
+        "likelihood of person-person transmission, secondary attack rates, local reproductive numbers", ""
+      ],
+      ["ABM++ FRAMEWORK", "http://www.epimodels.org/drupal/?q=node/11",
+        "The ABM++ software framework is a tool which allows the developer to implement agent based models using C++ that are to be deployed on distributed memory Linux clusters. The framework provides the necessary functionality to allow applications to run on distributed architectures. A C++ message passing API is provided which provides the ability to send MPI messages between distributed objects. The framework also provides an interface that allows objects to be serialized into message buffers, allowing them to be moved between distributed compute nodes. A synchronization method is provided, and both time-stepped and distributed discrete event time update mechanisms are provided.",
+        "C++", "Agent based model, synthetic social network model", "Low level framework to implement agent based models to be deployed on Linux clusters", "Dependent on the implemented model", "Dependent on the implemented model", ""
+      ]
+    ];
+    $(document).ready(function() {
+      $('#example').DataTable({
+        data: dataSet,
+        columns: [{
+            title: "Model / Framework Title",
+            defaultContent: ""
+          },
+          {
+            title: "URL of Source Code / Project page",
+            defaultContent: ""
+          },
+          {
+            title: "Description",
+            defaultContent: ""
+          },
+          {
+            title: "Language Used",
+            defaultContent: ""
+          },
+          {
+            title: "Model Type",
+            defaultContent: ""
+          },
+          {
+            title: "Intended Use",
+            defaultContent: ""
+          },
+          {
+            title: "(Meta-)Data required",
+            defaultContent: ""
+          },
+          {
+            title: "Outputs",
+            defaultContent: ""
+          },
+          {
+            title: "Notes",
+            defaultContent: ""
+          }
+        ]
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -9,8 +9,6 @@ $(".dropdown").hover(
   }
   );
 
-
-
 //Search
 
   var openSearch = $('.open-search'),
